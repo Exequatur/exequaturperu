@@ -68,3 +68,44 @@ footer {
     border-radius: 50%;
     text-decoration: none;
 }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #222222;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #0047AB; /* azul eléctrico */
+  color: white;
+  padding: 1.5em;
+  text-align: center;
+}
+
+main {
+  padding: 2em;
+}
+
+h2 {
+  color: #0047AB;
+  margin-bottom: 1em;
+}
+
+#articulos-recientes {
+  margin-bottom: 3em;
+}
+
+#video-tiktok {
+  background-color: #FFEB3B; /* amarillo */
+  padding: 2em;
+  text-align: center;
+}
+
+footer {
+  background-color: #0047AB;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
