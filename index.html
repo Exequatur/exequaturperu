@@ -1,166 +1,140 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Exequatur Perú - Solicitud</title>
-<!-- Font Awesome para iconos sociales -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exequátur Perú Abogados & Gestores</title>
+  <link rel="icon" href="favicon.ico" />
+  <style>
     body {
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f5f7fa;
-        color: #333;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
     }
     header {
-        background-color: #2c3e50;
-        color: #ecf0f1;
-        padding: 30px 20px;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background: navy;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    header h1 {
-        margin: 0;
-        font-size: 28px;
-        letter-spacing: 2px;
+    header img {
+      height: 60px;
     }
-    .company-info {
-        margin-top: 10px;
-        font-size: 14px;
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
     }
-    .container {
-        max-width: 900px;
-        margin: 30px auto;
-        padding: 20px;
-        background-color: #ffffff;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        border-radius: 10px;
+    .hero {
+      background: url('https://images.unsplash.com/photo-1573164574237-cb89e39749b4') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
     }
-    h2 {
-        text-align: center;
-        margin-bottom: 30px;
-        color: #2c3e50;
-        font-size: 20px;
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
-    .section {
-        margin-bottom: 20px;
+    .btn {
+      background: #0066cc;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
     }
-    .subtitle {
-        font-weight: 600;
-        font-size: 16px;
-        margin-bottom: 8px;
-        color: #34495e;
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
     }
-    p {
-        margin: 0 0 10px;
-        line-height: 1.5;
+    .cta {
+      background: #e0f0ff;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
     }
     footer {
-        text-align: center;
-        margin-top: 40px;
-        padding: 20px;
-        background-color: #2c3e50;
-        color: #ecf0f1;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #f0f0f0;
     }
-    /* Botón flotante WhatsApp */
-    .whatsapp-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25D366;
-        color: white;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 28px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        cursor: pointer;
-        transition: background-color 0.3s, transform 0.3s;
-        z-index: 1000;
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     }
-    .whatsapp-btn:hover {
-        background-color: #1ebe57;
-        transform: scale(1.05);
+    .whatsapp-button img {
+      width: 100%;
+      height: 100%;
     }
-    /* Iconos sociales */
-    .social-icons {
-        margin-top: 20px;
-        text-align: center;
-    }
-    .social-icons a {
-        margin: 0 10px;
-        color: #2c3e50;
-        font-size: 20px;
-        transition: color 0.3s, transform 0.3s;
-    }
-    .social-icons a:hover {
-        color: #2980b9;
-        transform: scale(1.2);
-    }
-</style>
+  </style>
 </head>
 <body>
+  <header>
+    <img src="logo-exequatur.png" alt="Logo Exequátur Perú" />
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+      <a href="guia-exequatur-2025.pdf" download>Guía</a>
+    </nav>
+  </header>
 
-<header>
-    <h1>EXEQUATUR PERU Abogados & Gestores</h1>
-    <div class="company-info">
-        <p>Especializados en Validación de Sentencias Extranjeras en Perú</p>
-        <p>Dirección: [Dirección completa]</p>
-        <p>Teléfono: [Número de teléfono]</p>
-        <p>Email: <a href="mailto:[Correo electrónico]" style="color:#ecf0f1; text-decoration:underline;">[Correo electrónico]</a></p>
-        <p>Sitio web: <a href="[URL del sitio web]" target="_blank" style="color:#ecf0f1; text-decoration:underline;">[URL del sitio web]</a></p>
-    </div>
-</header>
+  <div class="hero">
+    <h1>Reconoce tu Divorcio Extranjero en Perú</h1>
+    <p>Especialistas en procesos de Exequátur desde el extranjero</p>
+    <a href="#contacto" class="btn">Solicita tu evaluación gratuita</a>
+  </div>
 
-<div class="container">
-    <h2>Solicitud de Exequatur para Sentencia Extranjera</h2>
-    
-    <div class="section">
-        <p><strong>Fecha:</strong> [dd/mm/aaaa]</p>
-    </div>
-    
-    <div class="section">
-        <p><strong>Destinatario:</strong></p>
-        <p>[Nombre de la parte receptora o institución]</p>
-        <p>[Dirección, si corresponde]</p>
-    </div>
-    
-    <div class="section">
-        <div class="subtitle">Asunto:</div>
-        <p>Solicitud de Exequatur para Sentencia Extranjera</p>
-    </div>
-    
-    <div class="section">
-        <div class="subtitle">Introducción:</div>
-        <p>Nos dirigimos a usted en representación de <strong>EXEQUATUR PERU Abogados & Gestores</strong>, con el fin de solicitar la homologación y reconocimiento de una sentencia emitida en [país origen], que requiere ser validada en la República del Perú, conforme a las disposiciones legales aplicables.</p>
-    </div>
-    <!-- Puedes agregar más secciones aquí según necesidad -->
-</div>
+  <section id="servicios">
+    <h2>¿Qué es el Exequátur?</h2>
+    <p>Es el proceso legal mediante el cual una sentencia extranjera de divorcio puede ser reconocida y validada en Perú. Nuestro equipo te acompaña en cada paso, especialmente si resides en el extranjero.</p>
+    <ul>
+      <li>✓ Evaluación de tu sentencia</li>
+      <li>✓ Elaboración de la demanda</li>
+      <li>✓ Trámite ante la Corte Suprema</li>
+      <li>✓ Registro en RENIEC</li>
+    </ul>
+  </section>
 
-<!-- Botón flotante WhatsApp -->
-<a href="https://wa.me/51991296777" target="_blank" class="whatsapp-btn" title="Chatea con nosotros en WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-</a>
+  <section class="cta" id="contacto">
+    <h2>Solicita tu Evaluación Gratuita</h2>
+    <form action="mailto:exequaturperu@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Nombre" placeholder="Tu nombre completo" required />
+      <input type="email" name="Email" placeholder="Tu correo electrónico" required />
+      <textarea name="Mensaje" rows="4" placeholder="Describe brevemente tu caso" required></textarea>
+      <button class="btn" type="submit">Enviar</button>
+    </form>
+  </section>
 
-<!-- Redes sociales -->
-<div class="social-icons">
-    <a href="[facebook URL]" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="[twitter URL]" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-    <a href="[linkedin URL]" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-    <a href="[Instagram URL]" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-</div>
+  <a href="https://wa.me/51991296777" target="_blank" class="whatsapp-button">
+    <img src="whatsapp-icon.png" alt="WhatsApp" />
+  </a>
 
-<!-- Pie de página -->
-<footer>
-    <p>Atentamente,</p>
-    <p>[Nombre del representante]</p>
-    <p>[Cargo]</p>
-    <p>EXEQU
+  <footer>
+    &copy; 2025 EXEQUATUR PERÚ Abogados & Gestores<br>
+    Email: exequaturperu@gmail.com
+  </footer>
+</body>
+</html>
