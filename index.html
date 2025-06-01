@@ -1,140 +1,91 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exequátur Perú Abogados & Gestores</title>
-  <link rel="icon" href="favicon.ico" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: navy;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header img {
-      height: 60px;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1573164574237-cb89e39749b4') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 6rem 1rem;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .btn {
-      background: #0066cc;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    .cta {
-      background: #e0f0ff;
-      padding: 2rem;
-      border-radius: 12px;
-      text-align: center;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      background: #f0f0f0;
-    }
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      background: #25D366;
-      border-radius: 50%;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    }
-    .whatsapp-button img {
-      width: 100%;
-      height: 100%;
-    }
-  </style>
+  <title>EXEQUATUR PERÚ Abogados</title>
+
+  <!-- Meta tags SEO -->
+  <meta name="description" content="Abogados expertos en reconocimiento y ejecución de sentencias extranjeras en el Perú.">
+  <meta name="keywords" content="exequátur Perú, sentencia extranjera, divorcio internacional, abogados Perú, reconocimiento sentencia extranjera">
+  <meta name="author" content="EXEQUATUR PERU Abogados & Gestores">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <img src="logo-exequatur.png" alt="Logo Exequátur Perú" />
-    <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-      <a href="guia-exequatur-2025.pdf" download>Guía</a>
-    </nav>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-white shadow p-6">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-800">EXEQUATUR PERÚ</h1>
+      <nav>
+        <a href="#servicios" class="mx-3 text-gray-700 hover:text-blue-600">Servicios</a>
+        <a href="#nosotros" class="mx-3 text-gray-700 hover:text-blue-600">Nosotros</a>
+        <a href="#contacto" class="mx-3 text-gray-700 hover:text-blue-600">Contacto</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="hero">
-    <h1>Reconoce tu Divorcio Extranjero en Perú</h1>
-    <p>Especialistas en procesos de Exequátur desde el extranjero</p>
-    <a href="#contacto" class="btn">Solicita tu evaluación gratuita</a>
-  </div>
-
-  <section id="servicios">
-    <h2>¿Qué es el Exequátur?</h2>
-    <p>Es el proceso legal mediante el cual una sentencia extranjera de divorcio puede ser reconocida y validada en Perú. Nuestro equipo te acompaña en cada paso, especialmente si resides en el extranjero.</p>
-    <ul>
-      <li>✓ Evaluación de tu sentencia</li>
-      <li>✓ Elaboración de la demanda</li>
-      <li>✓ Trámite ante la Corte Suprema</li>
-      <li>✓ Registro en RENIEC</li>
-    </ul>
+  <!-- Hero Section -->
+  <section class="bg-blue-100 py-20 text-center px-4">
+    <h2 class="text-4xl font-bold mb-4">Reconocimiento de sentencias extranjeras en el Perú</h2>
+    <p class="text-xl text-gray-700 max-w-3xl mx-auto">Abogados especializados en exequátur, divorcio internacional y ejecución de resoluciones extranjeras. Servicio confiable, rápido y seguro.</p>
+    <div class="mt-8">
+      <a href="https://wa.me/51991296777" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg">
+        Contáctanos por WhatsApp
+      </a>
+    </div>
   </section>
 
-  <section class="cta" id="contacto">
-    <h2>Solicita tu Evaluación Gratuita</h2>
-    <form action="mailto:exequaturperu@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="Nombre" placeholder="Tu nombre completo" required />
-      <input type="email" name="Email" placeholder="Tu correo electrónico" required />
-      <textarea name="Mensaje" rows="4" placeholder="Describe brevemente tu caso" required></textarea>
-      <button class="btn" type="submit">Enviar</button>
-    </form>
+  <!-- Servicios -->
+  <section id="servicios" class="max-w-5xl mx-auto py-16 px-4">
+    <h3 class="text-3xl font-semibold text-center mb-10">Nuestros Servicios</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white shadow p-6 rounded-xl">
+        <h4 class="text-xl font-bold mb-2">Exequátur de divorcio</h4>
+        <p>Reconocimiento de sentencias de divorcio emitidas en el extranjero ante la Corte Suprema del Perú.</p>
+      </div>
+      <div class="bg-white shadow p-6 rounded-xl">
+        <h4 class="text-xl font-bold mb-2">Sentencias civiles extranjeras</h4>
+        <p>Procesos de reconocimiento de decisiones judiciales sobre herencias, contratos o alimentos.</p>
+      </div>
+      <div class="bg-white shadow p-6 rounded-xl">
+        <h4 class="text-xl font-bold mb-2">Asesoría completa</h4>
+        <p>Te guiamos en todo el proceso, desde la recopilación de documentos hasta la resolución final.</p>
+      </div>
+    </div>
   </section>
 
-  <a href="https://wa.me/51991296777" target="_blank" class="whatsapp-button">
-    <img src="whatsapp-icon.png" alt="WhatsApp" />
-  </a>
+  <!-- Nosotros -->
+  <section id="nosotros" class="bg-gray-100 py-16 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-6">¿Quiénes somos?</h3>
+      <p class="text-lg">Somos un equipo de abogados peruanos con amplia experiencia en procesos de reconocimiento de sentencias extranjeras, comprometidos con un servicio de excelencia.</p>
+    </div>
+  </section>
 
-  <footer>
-    &copy; 2025 EXEQUATUR PERÚ Abogados & Gestores<br>
-    Email: exequaturperu@gmail.com
+  <!-- Contacto -->
+  <section id="contacto" class="max-w-3xl mx-auto py-16 text-center px-4">
+    <h3 class="text-3xl font-semibold mb-6">Contáctanos</h3>
+    <p class="mb-4">Email: <a href="mailto:contacto@exequatur.pe" class="text-blue-600 underline">contacto@exequatur.pe</a></p>
+    <p class="mb-4">WhatsApp: <a href="https://wa.me/51991296777" class="text-blue-600 underline">+51 991 296 777</a></p>
+
+    <div class="flex justify-center space-x-6 mt-8">
+      <a href="#" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" class="w-6 h-6" alt="Facebook"></a>
+      <a href="#" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" class="w-6 h-6" alt="Instagram"></a>
+      <a href="#" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" class="w-6 h-6" alt="LinkedIn"></a>
+      <a href="#" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" class="w-6 h-6" alt="YouTube"></a>
+      <a href="#" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" class="w-6 h-6" alt="TikTok"></a>
+      <a href="#" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" class="w-6 h-6" alt="Twitter"></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow p-4 text-center text-sm text-gray-500">
+    &copy; 2025 EXEQUATUR PERÚ Abogados & Gestores. Todos los derechos reservados.
   </footer>
+
 </body>
 </html>
