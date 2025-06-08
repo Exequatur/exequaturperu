@@ -1,54 +1,92 @@
 
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EXEQUATUR PERÚ Abogados & Gestores</title>
-  <meta name="description" content="Especialistas en reconocimiento y ejecución de sentencias extranjeras en Perú. Asesoría legal sin necesidad de viajar.">
-  <meta name="keywords" content="exequátur, sentencia extranjera, divorcio internacional, abogados Perú, reconocimiento de sentencias, abogados peruanos en el extranjero">
-  <meta name="author" content="EXEQUATUR PERÚ">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EXEQUATUR PERÚ Abogados &amp; Gestores</title>
+<meta content="Especialistas en el reconocimiento y ejecución de sentencias extranjeras en Perú. Consultas legales sin necesidad de viajar." name="description"/>
+<meta content="EXEQUATUR PERÚ" name="author"/>
+<link href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" referrerpolicy="no-referrer" rel="stylesheet">
+<style>
+    :root {
+      --azul-electrico: #007BFF;
+      --amarillo-pastel: #FFFACD;
+      --verde-limon: #BFFF00;
+      --fondo-claro: #fefefe;
+      --texto: #1a1a1a;
+    }
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #fdfdfd;
-      color: #222;
+      background: var(--fondo-claro);
+      color: var(--texto);
+      line-height: 1.6;
     }
 
     header, footer {
-      background: #002147;
+      background: var(--azul-electrico);
       color: white;
       padding: 1rem 2rem;
     }
 
-    header h1 {
+    header h1, footer p {
       margin: 0;
-      font-size: 1.8rem;
     }
 
-    nav .social-icons a {
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
       color: white;
       margin-left: 1rem;
-      font-size: 1.2rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--amarillo-pastel);
     }
 
     .hero {
-      background: linear-gradient(90deg, #eaeaea, #c9a22730);
-      color: #002147;
+      background: linear-gradient(90deg, var(--amarillo-pastel), var(--verde-limon));
+      color: #000;
       text-align: center;
       padding: 3rem 1rem;
     }
 
     .hero h2 {
       font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
 
     .hero p {
       font-size: 1.2rem;
-      margin: 1rem 0;
+      margin-bottom: 1rem;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background: var(--verde-limon);
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background: #a8e600;
+      transform: scale(1.05);
     }
 
     .section {
@@ -57,141 +95,150 @@
       margin: auto;
     }
 
-    .section h3 {
-      color: #002147;
-      margin-bottom: 1rem;
+    .contact {
+      background: #eefaff;
+      padding: 2rem 1.5rem;
     }
 
-    .info-list i {
-      color: #C9A227;
+    .contact i {
       margin-right: 0.5rem;
     }
 
-    .contact {
-      background: #f5f5f5;
-      padding: 2rem 1.5rem;
-      border-top: 2px solid #c9a227;
+    .contact a {
+      color: var(--azul-electrico);
+      text-decoration: none;
     }
 
-    .contact label {
-      display: block;
-      margin-top: 1rem;
+    .contact a:hover {
+      text-decoration: underline;
     }
 
-    .contact input, .contact textarea {
-      width: 100%;
-      padding: 0.6rem;
-      margin-top: 0.25rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    .contact button {
-      background-color: #25d366;
+    .social-icons a {
       color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 30px;
-      margin-top: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease;
+      margin-right: 1rem;
+      font-size: 1.2rem;
     }
 
-    .contact button:hover {
-      background-color: #1ebe5b;
+    .blog-preview {
+      background: var(--amarillo-pastel);
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid var(--azul-electrico);
     }
 
-    .whatsapp-float {
-      position: fixed;
-      width: 55px;
-      height: 55px;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50px;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      z-index: 100;
-    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-    .whatsapp-float i {
-      margin-top: 12px;
-    }
+      nav a {
+        margin: 0.5rem 0 0;
+      }
 
-    footer p {
-      margin: 0.5rem 0 0;
+      .hero h2 {
+        font-size: 1.75rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
     }
   </style>
-</head>
+</link></head>
 <body>
-  <header>
-    <nav>
-      <h1>EXEQUATUR PERÚ</h1>
-      <div class="social-icons">
-        <a href="https://facebook.com/exequaturenperu" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/exequaturenperu/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com/exequaturperu" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://pe.linkedin.com/in/exequaturperu" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://tiktok.com/@exequaturperu" target="_blank"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h2>¿Se divorció en el extranjero?</h2>
-    <p>Nos encargamos del reconocimiento legal en Perú. Sin necesidad de viajar.</p>
-    <a class="whatsapp-float" href="https://wa.me/51988521023" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  </section>
-
-  <section class="section">
-    <h3>¿Por qué elegirnos?</h3>
-    <ul class="info-list">
-      <li><i class="fas fa-gavel"></i> Más de 20 años de experiencia legal.</li>
-      <li><i class="fas fa-users"></i> Asistencia a peruanos en el extranjero.</li>
-      <li><i class="fas fa-clock"></i> Procesos desde 4 meses.</li>
-      <li><i class="fas fa-file-alt"></i> Manejo completo de documentación y trámites.</li>
-    </ul>
-  </section>
-
-  <section class="contact">
-    <h3>Consulta Legal Inmediata</h3>
-    <form id="contactForm">
-      <label><i class="fas fa-user"></i> Nombre completo
-        <input type="text" id="nombre" required />
-      </label>
-      <label><i class="fas fa-envelope"></i> Correo electrónico
-        <input type="email" id="correo" required />
-      </label>
-      <label><i class="fas fa-globe"></i> País de residencia
-        <input type="text" id="pais" />
-      </label>
-      <label><i class="fas fa-comment"></i> Consulta legal
-        <textarea id="mensaje" rows="4" required></textarea>
-      </label>
-      <button type="submit">Enviar consulta legal</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 EXEQUATUR PERÚ Abogados & Gestores</p>
-  </footer>
-
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const nombre = document.getElementById("nombre").value;
-      const correo = document.getElementById("correo").value;
-      const pais = document.getElementById("pais").value;
-      const mensaje = document.getElementById("mensaje").value;
-
-      const texto = encodeURIComponent(
-        `Hola, soy ${nombre} desde ${pais}.\nMi consulta es: ${mensaje}\nMi correo es: ${correo}`
-      );
-      window.open("https://wa.me/51988521023?text=" + texto, "_blank");
-    });
-  </script>
+<header>
+<nav aria-label="Redes sociales">
+<div>
+<h1>EXEQUATUR PERÚ</h1>
+</div>
+<div class="social-icons">
+<a aria-label="Facebook" href="https://facebook.com/exequaturenperu" target="_blank"><i class="fab fa-facebook"></i></a>
+<a aria-label="Instagram" href="https://www.instagram.com/exequaturenperu/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a aria-label="YouTube" href="https://youtube.com/exequaturperu" target="_blank"><i class="fab fa-youtube"></i></a>
+<a aria-label="LinkedIn" href="https://pe.linkedin.com/in/exequaturperu" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a aria-label="TikTok" href="https://tiktok.com/@exequaturperu" target="_blank"><i class="fab fa-tiktok"></i></a>
+</div>
+</nav>
+</header>
+<main>
+<section class="hero">
+<h2>¿SE DIVORCIÓ EN EL EXTRANJERO?</h2>
+<p>Reconocimiento y Ejecución de Sentencias Extranjeras en el Perú</p>
+<a class="whatsapp-btn" href="https://wa.me/51988521023" target="_blank">Contáctanos por WhatsApp</a>
+</section>
+<section aria-labelledby="info" class="section">
+<h3 id="info">EXEQUATUR PERÚ Abogados &amp; Gestores</h3>
+<p>Somos un estudio jurídico especializado en el reconocimiento y ejecución de sentencias extranjeras en el Perú, con más de veinte años de experiencia. Representamos a peruanos en el extranjero sin necesidad de que viajen al Perú.</p>
+<h4>¿Qué es el Exequátur?</h4>
+<p>Es el proceso judicial mediante el cual un Estado verifica que una sentencia judicial dictada por otro Estado reúne los requisitos legales que permiten su reconocimiento. Se utiliza mayormente para homologar sentencias de divorcio dictadas en el extranjero.</p>
+<h4>Documentos necesarios:</h4>
+<ul>
+<li>Sentencia legalizada o apostillada</li>
+<li>Certificado de firmeza (opcional)</li>
+<li>DNI del solicitante</li>
+<li>Traducción oficial (si es necesario)</li>
+<li>Partida de matrimonio</li>
+<li>Poder especial otorgado ante el consulado peruano</li>
+</ul>
+<h4>Duración</h4>
+<p>El trámite puede durar entre 4 y 12 meses. Se recomienda solicitarlo de forma conjunta (ambos ex cónyuges).</p>
+</section>
+<section aria-labelledby="beneficios" class="section">
+<h3 id="beneficios">¿Por qué elegir EXEQUATUR PERÚ?</h3>
+<ul>
+<li><strong>Especialización exclusiva:</strong> Nos dedicamos únicamente al reconocimiento de sentencias extranjeras, asegurando excelencia y resultados.</li>
+<li><strong>Trato personalizado:</strong> Atendemos a cada cliente con dedicación, resolviendo todas sus dudas y acompañándolo durante todo el proceso.</li>
+<li><strong>Sin necesidad de viajar:</strong> Usted puede gestionar todo el proceso desde el extranjero, sin venir al Perú.</li>
+<li><strong>Agilidad y experiencia:</strong> Más de 20 años representando con éxito a peruanos en el exterior.</li>
+</ul>
+</section>
+<section aria-labelledby="pasos" class="section">
+<h3 id="pasos">Pasos del proceso de Exequátur en Perú</h3>
+<ol>
+<li><strong>Recolección de documentos:</strong> Reunimos toda la documentación necesaria en el país de origen.</li>
+<li><strong>Evaluación jurídica:</strong> Nuestro equipo valida legalmente los documentos y redacta la demanda.</li>
+<li><strong>Presentación judicial:</strong> Se presenta la solicitud ante el Poder Judicial del Perú.</li>
+<li><strong>Proceso judicial:</strong> El expediente es revisado por la Sala correspondiente.</li>
+<li><strong>Resolución final:</strong> Se emite la sentencia que valida oficialmente la sentencia extranjera.</li>
+</ol>
+</section>
+<section aria-labelledby="faq" class="section">
+<h3 id="faq">Preguntas Frecuentes</h3>
+<h4>¿Cuánto cuesta el proceso?</h4>
+<p>Ofrecemos tarifas competitivas que dependen del caso y la documentación. Puede escribirnos para una cotización personalizada.</p>
+<h4>¿Qué pasa si la sentencia está en otro idioma?</h4>
+<p>Debe contar con una traducción oficial (jurada). Nosotros podemos ayudarle a gestionarla.</p>
+<h4>¿Qué sucede si uno de los cónyuges no quiere participar?</h4>
+<p>El proceso puede hacerse de forma unilateral. Sin embargo, recomendamos el trámite conjunto por mayor rapidez y facilidad.</p>
+</section>
+<section aria-labelledby="formulario" class="section"><h3 id="formulario">Consulta Legal por Correo</h3><form action="mailto:exequaturperu@gmail.com" enctype="text/plain" method="POST"><label for="nombre">Nombre completo</label><input id="nombre" name="nombre" required="True" type="text"/><label for="email">Correo electrónico</label><input id="email" name="email" required="True" type="email"/><label for="pais">País de residencia</label><input id="pais" name="pais" required="True" type="text"/><label for="mensaje">Mensaje o consulta legal</label><textarea id="mensaje" name="mensaje" required="True" rows="4"></textarea><button type="submit">Enviar consulta legal</button></form></section><section aria-labelledby="contacto" class="contact">
+<h4 id="contacto">Contacto 24/7</h4>
+<p><i class="fas fa-phone"></i> +51 991296777 - 988521023</p>
+<p><i class="fas fa-envelope"></i> <a href="mailto:exequaturperu@gmail.com">exequaturperu@gmail.com</a></p>
+<p><i class="fab fa-whatsapp"></i> <a class="whatsapp-btn" href="https://wa.me/51988521023" target="_blank">Consultas por WhatsApp</a></p>
+</section>
+<section aria-labelledby="articulos" class="section">
+<h3 id="articulos">Artículos recientes</h3>
+<div class="blog-preview">
+<h4>¿Qué es el exequátur y por qué es importante?</h4>
+<p>Descubre el proceso de validación de sentencias extranjeras en el Perú y cómo EXEQUATUR PERÚ puede ayudarte.</p>
+</div>
+<div class="blog-preview">
+<h4>Documentación esencial para un exequátur exitoso</h4>
+<p>Revisa nuestra guía práctica sobre los documentos claves que debes presentar ante las autoridades peruanas.</p>
+</div>
+</section>
+</main>
+<footer>
+<p>© 2025 EXEQUATUR PERÚ Abogados &amp; Gestores</p>
+<div class="social-icons">
+<a href="https://facebook.com/exequaturenperu" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://www.instagram.com/exequaturenperu/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://youtube.com/exequaturperu" target="_blank"><i class="fab fa-youtube"></i></a>
+<a href="https://pe.linkedin.com/in/exequaturperu" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a href="https://tiktok.com/@exequaturperu" target="_blank"><i class="fab fa-tiktok"></i></a>
+</div>
+</footer>
 </body>
 </html>
