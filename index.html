@@ -12,19 +12,107 @@
       --bg: #fff;
       --font: Arial, sans-serif;
     }
-    body { margin:0; font-family: var(--font); color: var(--text-dark); background: var(--bg); line-height:1.6;}
-    header { background: var(--navy); color: var(--amber); padding: 1rem; text-align:center;}
-    header h1 { margin:0; font-size:2rem;}
-    header p { margin:0.5rem 0 0;}
-    nav { background: var(--amber); padding:0.5rem; text-align:center;}
-    nav a { color: var(--navy); margin:0 1rem; text-decoration:none; font-weight:bold;}
-    section { padding:1rem; max-width:900px; margin: auto;}
-    .highlight { background: var(--amber); padding:0.5rem; }
-    .steps ol { margin-left:1rem;}
-    footer { background: #f5f5f5; color: #666; text-align:center; padding:1rem; font-size:0.9rem;}
-    .contact { background: var(--navy); color: #fff; padding:1rem; text-align:center; }
-    .contact a { color: var(--amber); text-decoration:none; font-weight:bold; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text-dark);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--navy);
+      color: var(--amber);
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      background: var(--amber);
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: var(--navy);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .steps ol {
+      margin-left: 1rem;
+    }
+    footer {
+      background: #f5f5f5;
+      color: #666;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .contact {
+      background: var(--navy);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .contact a {
+      color: var(--amber);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .whatsapp-float:hover {
+      background-color: #20b65d;
+    }
+
+    /* Social Icons */
+    .social-icons {
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: var(--navy);
+      font-size: 1.4rem;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      color: var(--amber);
+    }
+
+    @media screen and (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
   </style>
+
+  <!-- FontAwesome CDN for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -76,11 +164,9 @@
 
   <section id="testimonios">
     <h2>Testimonios de Éxito</h2>
-    <div>
-      <p><em>“Logré homologar mi divorcio sin viajar. Fueron claros, rápidos y siempre disponibles.”</em> – Andrea M., España</p>
-      <p><em>“Me ayudaron con una sentencia de alimentos en NY; proceso ágil y profesional.”</em> – Carlos R., EE.UU.</p>
-      <p><em>“Excelente atención, transparencia y respeto.”</em> – Luis C., Alemania</p>
-    </div>
+    <p><em>“Logré homologar mi divorcio sin viajar. Fueron claros, rápidos y siempre disponibles.”</em> – Andrea M., España</p>
+    <p><em>“Me ayudaron con una sentencia de alimentos en NY; proceso ágil y profesional.”</em> – Carlos R., EE.UU.</p>
+    <p><em>“Excelente atención, transparencia y respeto.”</em> – Luis C., Alemania</p>
   </section>
 
   <section id="contacto" class="contact">
@@ -92,8 +178,18 @@
   </section>
 
   <footer>
-    &copy; 2025 EXEQUATUR PERÚ. Todos los derechos reservados.
+    <p>&copy; 2025 EXEQUATUR PERÚ. Todos los derechos reservados.</p>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
   </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/51991296777" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
