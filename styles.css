@@ -1,111 +1,58 @@
 
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #fefefe;
-    color: #222;
-}
-header {
-    background: #003366;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-.hero {
-    background: #e6f0ff;
-    padding: 40px;
-    text-align: center;
-}
-.hero .btn {
-    background: #003366;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 8px;
-}
-section {
-    padding: 20px;
-    margin: 10px;
-}
-ul, ol {
-    padding-left: 20px;
-}
-.abogados {
-    background: #f5f5f5;
-}
-.contacto form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.contacto input, .contacto textarea {
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-button {
-    background: #003366;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-}
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #003366;
-    color: #fff;
-}
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25d366;
-    color: white;
-    font-size: 24px;
-    padding: 10px 14px;
-    border-radius: 50%;
-    text-decoration: none;
-}
-body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #222222;
-  line-height: 1.6;
 }
-
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#loader img {
+  width: 120px;
+}
+#loader p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
 header {
-  background-color: #0047AB; /* azul eléctrico */
-  color: white;
-  padding: 1.5em;
-  text-align: center;
-}
-
-main {
-  padding: 2em;
-}
-
-h2 {
-  color: #0047AB;
-  margin-bottom: 1em;
-}
-
-#articulos-recientes {
-  margin-bottom: 3em;
-}
-
-#video-tiktok {
-  background-color: #FFEB3B; /* amarillo */
-  padding: 2em;
-  text-align: center;
-}
-
-footer {
-  background-color: #0047AB;
+  background-color: #0056A6;
   color: white;
   padding: 1em;
   text-align: center;
+}
+.logo {
+  width: 80px;
+}
+main {
+  padding: 2em;
+}
+#slider {
+  margin: 1em 0;
+  color: #003366;
+  font-weight: bold;
+  min-height: 2em;
+}
+.slide {
+  display: none;
+}
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+a {
+  color: #FFC300;
 }

@@ -1,191 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EXEQUATUR PERÚ | Abogados & Gestores</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-...==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    :root {
-      --navy: #002147;
-      --amber: #FFBF00;
-      --text-dark: #333;
-      --bg: #fff;
-      --font: Arial, sans-serif;
-    }
-    body {
-      margin: 0;
-      font-family: var(--font);
-      color: var(--text-dark);
-      background: var(--bg);
-      line-height: 1.6;
-    }
-    header {
-      background: var(--navy);
-      color: var(--amber);
-      padding: 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    nav {
-      background: var(--amber);
-      padding: 0.5rem;
-      text-align: center;
-    }
-    nav a {
-      color: var(--navy);
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .steps ol {
-      margin-left: 1rem;
-    }
-    footer {
-      background: #f5f5f5;
-      color: #666;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    .contact {
-      background: var(--navy);
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-    .contact a {
-      color: var(--amber);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* WhatsApp Floating Button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .whatsapp-float:hover {
-      background-color: #1ebe5d;
-    }
-
-    /* Social Icons */
-    .social-icons {
-      margin-top: 1rem;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      color: var(--navy);
-      font-size: 1.4rem;
-      text-decoration: none;
-    }
-    .social-icons a:hover {
-      color: var(--amber);
-    }
-
-    @media screen and (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exequátur Perú</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-
+  <div id="loader">
+    <img src="logo.png" alt="Exequátur Perú" />
+    <p>Cargando Exequátur Perú...</p>
+  </div>
   <header>
-    <h1>EXEQUATUR PERÚ</h1>
-    <p>Abogados & Gestores – Reconocimiento y Ejecución de Sentencias Extranjeras</p>
+    <img src="logo.png" alt="Logo Exequátur Perú" class="logo" />
+    <h1>Exequátur Perú</h1>
+    <p>Especialistas en reconocimiento de sentencias extranjeras</p>
   </header>
-
-  <nav>
-    <a href="#servicio">Nuestro Servicio</a>
-    <a href="#proceso">Proceso</a>
-    <a href="#preguntas">FAQ</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section id="servicio">
-    <h2>¿Por qué elegirnos?</h2>
-    <ul>
-      <li><strong>Especialización exclusiva:</strong> Solo exequátur, más de 20 años de experiencia.</li>
-      <li><strong>Atención personalizada:</strong> acompañamiento cercano durante todo el trámite.</li>
-      <li><strong>Gestión remota:</strong> sin necesidad de viajar al Perú.</li>
-      <li><strong>Eficiencia comprobada:</strong> casos complejos resueltos con éxito.</li>
-    </ul>
-  </section>
-
-  <section id="proceso">
-    <h2>Pasos del Proceso de Exequátur</h2>
-    <div class="steps">
-      <ol>
-        <li>Recolección de documentos (sentencia apostillada, DNI, traducción y más).</li>
-        <li>Evaluación jurídica y redacción de la demanda.</li>
-        <li>Presentación ante el Poder Judicial del Perú.</li>
-        <li>Proceso judicial y seguimiento del expediente.</li>
-        <li>Sentencia final que reconoce la validez de la sentencia extranjera.</li>
-      </ol>
-    </div>
-    <p>Duración estimada: entre 4 y 12 meses, según caso.</p>
-  </section>
-
-  <section id="preguntas">
-    <h2>Preguntas Frecuentes</h2>
-    <h3>¿Cuánto cuesta?</h3>
-    <p>Tarifas competitivas según caso y documentación. Contáctanos para cotización personalizada.</p>
-    <h3>¿Qué pasa si la sentencia está en otro idioma?</h3>
-    <p>Requiere traducción oficial; podemos ayudarte a gestionarla.</p>
-    <h3>¿Y si uno de los cónyuges no quiere participar?</h3>
-    <p>Se puede tramitar de forma unilateral, pero el proceso suele ser más rápido si se hace de forma conjunta.</p>
-  </section>
-
-  <section id="testimonios">
-    <h2>Testimonios de Éxito</h2>
-    <p><em>“Logré homologar mi divorcio sin viajar. Fueron claros, rápidos y siempre disponibles.”</em> – Andrea M., España</p>
-    <p><em>“Me ayudaron con una sentencia de alimentos en NY; proceso ágil y profesional.”</em> – Carlos R., EE.UU.</p>
-    <p><em>“Excelente atención, transparencia y respeto.”</em> – Luis C., Alemania</p>
-  </section>
-
-  <section id="contacto" class="contact">
-    <h2>Contáctanos</h2>
-    <p><strong>Ubicación:</strong> Edificio Ítalo Peruano de Seguros, Lima 01 – Perú</p>
-    <p><strong>Correo:</strong> <a href="mailto:exequaturperu@gmail.com">exequaturperu@gmail.com</a></p>
-    <p><strong>Teléfonos:</strong> <a href="tel:+51991296777">+51 991 296 777</a>, <a href="tel:+51988521023">+51 988 521 023</a></p>
-    <p><a href="https://wa.me/51991296777">Contáctanos por WhatsApp</a></p>
-  </section>
+  <main>
+    <section id="hero">
+      <h2>Regulariza tu estado civil desde el extranjero</h2>
+      <div id="slider">
+        <p class="slide">Desde cualquier parte del mundo, regulariza tu estado civil en el Perú.</p>
+        <p class="slide">Más de 200 casos exitosos de exequátur en los últimos 5 años.</p>
+        <p class="slide">Atendemos a peruanos en EE.UU., España, Italia, Japón y más.</p>
+        <p class="slide">Expertos en validar divorcios y sentencias extranjeras en Perú.</p>
+        <p class="slide">Exequátur Perú: tu puente legal entre el extranjero y tu país.</p>
+      </div>
+      <a href="guia-exequatur.pdf" download>📄 Descargar Guía Práctica</a>
+    </section>
+    <section id="consular">
+      <h3>Asesoría Consular para Peruanos en el Extranjero</h3>
+      <p>Te guiamos en trámites notariales, poderes consulares y legalizaciones en consulados peruanos.</p>
+      <ul>
+        <li>✍️ Poder por escritura pública</li>
+        <li>📄 Autenticación de firma</li>
+        <li>📬 Envío de documentos legalizados al Perú</li>
+      </ul>
+      <p>Mapa de consulados: próximamente interactivo.</p>
+    </section>
+    <section id="contacto">
+      <p>Contáctanos por WhatsApp: <a href="https://wa.me/51991296777">+51 991 296 777</a></p>
+    </section>
+  </main>
   <footer>
-    <p>&copy; 2025 EXEQUATUR PERÚ. Todos los derechos reservados.</p>
-    <div class="social-icons">
-      <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-    </div>
+    <p>Síguenos en: Facebook | YouTube | Correo</p>
+    <p>© 2025 Exequátur Perú Abogados</p>
   </footer>
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/51991296777" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
 </body>
 </html>
