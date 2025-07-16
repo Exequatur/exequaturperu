@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -78,6 +77,8 @@ h1, h2, h3 {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   z-index: 999;
 }
+
+/* Estilos para móviles */
 @media screen and (max-width: 600px) {
   header {
     flex-direction: column;
@@ -114,7 +115,9 @@ h1, h2, h3 {
     align-items: center;
   }
 
-  #contacto h3, #contacto p, #contacto a {
+  #contacto h3,
+  #contacto p,
+  #contacto a {
     text-align: center;
   }
 
