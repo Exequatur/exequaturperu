@@ -1,1 +1,127 @@
-/* Estilos reales */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fefefe;
+  color: #1A2A40;
+}
+
+header, footer {
+  background-color: #1A2A40;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: #1A2A40;
+}
+
+.hero {
+  background-color: #FFF8E1;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.button {
+  background-color: #FFC107;
+  color: #1A2A40;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.footer-director {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.director-mini {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+/* Estilos para móviles */
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 1.5rem 1rem;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonios div,
+  .service-card {
+    margin-bottom: 1rem;
+  }
+
+  .director img {
+    width: 60px;
+  }
+
+  #contacto > div {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  #contacto h3,
+  #contacto p,
+  #contacto a {
+    text-align: center;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+  }
+}
