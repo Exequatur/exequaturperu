@@ -78,3 +78,47 @@ h1, h2, h3 {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   z-index: 999;
 }
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 1.5rem 1rem;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonios div,
+  .service-card {
+    margin-bottom: 1rem;
+  }
+
+  .director img {
+    width: 60px;
+  }
+
+  #contacto > div {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  #contacto h3, #contacto p, #contacto a {
+    text-align: center;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+  }
+}
