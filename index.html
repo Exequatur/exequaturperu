@@ -3,229 +3,190 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Especialistas en exequátur en Perú. Reconocimiento de sentencias extranjeras sin necesidad de viajar. Atención personalizada para peruanos en el extranjero.">
-  <title>EXEQUATUR PERÚ | Abogados & Gestores</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>EXEQUATUR PERÚ - Abogados & Gestores</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
-      --navy: #002147;
-      --amber: #FFBF00;
-      --text-dark: #333;
-      --bg: #fff;
-      --font: Arial, sans-serif;
+      --azul: #1c3c5a;
+      --ambar: #ffc107;
+      --gris: #f8f9fa;
     }
     body {
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      font-family: var(--font);
-      color: var(--text-dark);
-      background: var(--bg);
-      line-height: 1.6;
+      padding: 0;
+      background-color: white;
+      color: #333;
     }
     header {
-      background: var(--navy);
-      color: var(--amber);
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background-color: var(--azul);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2rem;
-    }
-    header h2 {
-      font-size: 1.2rem;
-      font-weight: normal;
-    }
-    nav {
-      background: var(--amber);
-      padding: 0.5rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 99;
+      font-size: 1.5rem;
     }
     nav a {
-      color: #00152E;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-    nav a:hover {
-      color: #fff;
-      background: var(--navy);
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-    }
-    section {
-      background: #f9f9f9;
-      border-radius: 8px;
-      padding: 2rem;
-      max-width: 900px;
-      margin: 2rem auto;
-    }
-    h2 {
-      color: var(--navy);
-      border-left: 5px solid var(--amber);
-      padding-left: 0.5rem;
-    }
-    .steps ol {
+      color: white;
       margin-left: 1rem;
+      text-decoration: none;
     }
-    footer {
-      background: #f5f5f5;
-      color: #666;
+    .hero {
+      background: linear-gradient(to right, var(--azul), #244b6b);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      background-color: var(--ambar);
+      color: black;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--gris);
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .service-card i {
+      font-size: 2rem;
+      color: var(--azul);
+      margin-bottom: 0.5rem;
+    }
+    .testimonios, .director {
+      background-color: #f1f1f1;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+    .testimonio {
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    .footer {
+      background-color: var(--azul);
+      color: white;
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
+      margin-top: 2rem;
     }
-    .contact {
-      background: var(--navy);
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
-      border-radius: 8px;
-    }
-    .contact a {
-      color: var(--amber);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .whatsapp-float {
+    .whatsapp {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #25D366;
+      background-color: #25d366;
       color: white;
+      padding: 0.8rem 1rem;
       border-radius: 50%;
-      width: 60px;
-      height: 60px;
+      font-size: 1.5rem;
+      z-index: 999;
       text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: pulse 2s infinite;
     }
-    .whatsapp-float:hover {
-      background-color: #1ebe5d;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-
-    .social-icons {
+    .redes {
       margin-top: 1rem;
     }
-    .social-icons a {
-      margin: 0 10px;
-      color: var(--navy);
-      font-size: 1.4rem;
-      text-decoration: none;
+    .redes a {
+      color: white;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
     }
-    .social-icons a:hover {
-      color: var(--amber);
-    }
-
-    @media screen and (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-      header h1 {
-        font-size: 1.5rem;
-      }
-      header h2 {
-        font-size: 1rem;
-      }
+    .director img {
+      width: 80px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>EXEQUATUR PERÚ</h1>
-    <h2>Abogados & Gestores – Reconocimiento y Ejecución de Sentencias Extranjeras</h2>
-  </header>
-
+<header>
+  <h1>EXEQUATUR PERÚ</h1>
   <nav>
-  <a href="index.html">Inicio</a>
-  <a href="servicios.html">Especialidades</a>
-  <a href="director.html">Director</a>
-  <a href="legal.html">Legal</a>
-  <a href="#servicio">Nuestro Servicio</a>
-  <a href="#proceso">Proceso</a>
-  <a href="#preguntas">FAQ</a>
-  <a href="#contacto">Contacto</a>
-</nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#director">Director</a>
+    <a href="legal.html">Aviso Legal</a>
+  </nav>
+</header>
 
-  <<p><a href="servicios.html"><strong>Ver nuestras áreas de especialización →</strong></a></p>
-    <h2>¿Por qué elegirnos?</h2>
-    <ul>
-      <li><strong>Especialización exclusiva:</strong> Solo exequátur, más de 20 años de experiencia.</li>
-      <li><strong>Atención personalizada:</strong> acompañamiento cercano durante todo el trámite.</li>
-      <li><strong>Gestión remota:</strong> sin necesidad de viajar al Perú.</li>
-      <li><strong>Eficiencia comprobada:</strong> casos complejos resueltos con éxito.</li>
-    </ul>
-  </section>
+<section class="hero">
+  <h2>Abogados expertos en sentencias extranjeras</h2>
+  <p>Trámites legales para peruanos en el extranjero: exequátur, divorcio, tenencia y más.</p>
+  <a href="https://wa.me/51999999999" class="btn">Contáctanos por WhatsApp</a>
+</section>
 
-  <section id="proceso">
-    <h2>Pasos del Proceso de Exequátur</h2>
-    <div class="steps">
-      <ol>
-        <li>Recolección de documentos (sentencia apostillada, DNI, traducción y más).</li>
-        <li>Evaluación jurídica y redacción de la demanda.</li>
-        <li>Presentación ante el Poder Judicial del Perú.</li>
-        <li>Proceso judicial y seguimiento del expediente.</li>
-        <li>Sentencia final que reconoce la validez de la sentencia extranjera.</li>
-      </ol>
+<section class="section" id="servicios">
+  <h2>Especialidades Jurídicas</h2>
+  <div class="services">
+    <div class="service-card">
+      <i class="fas fa-scale-balanced"></i>
+      <h3>Exequátur</h3>
+      <p>Validación de sentencias extranjeras en Perú.</p>
     </div>
-    <p>Duración estimada: entre 4 y 12 meses, según caso.</p>
-  </section>
-
-  <section id="preguntas">
-    <h2>Preguntas Frecuentes</h2>
-    <h3>¿Cuánto cuesta?</h3>
-    <p>Tarifas competitivas según caso y documentación. Contáctanos para cotización personalizada.</p>
-    <h3>¿Qué pasa si la sentencia está en otro idioma?</h3>
-    <p>Requiere traducción oficial; podemos ayudarte a gestionarla.</p>
-    <h3>¿Y si uno de los cónyuges no quiere participar?</h3>
-    <p>Se puede tramitar de forma unilateral, pero el proceso suele ser más rápido si se hace de forma conjunta.</p>
-  </section>
-<p style="text-align:center;"><a href="director.html"><strong>Conoce al director del estudio →</strong></a></p>
-  <section id="testimonios">
-    <h2>Testimonios de Éxito</h2>
-    <p><em>“Logré homologar mi divorcio sin viajar. Fueron claros, rápidos y siempre disponibles.”</em> – Andrea M., España</p>
-    <p><em>“Me ayudaron con una sentencia de alimentos en NY; proceso ágil y profesional.”</em> – Carlos R., EE.UU.</p>
-    <p><em>“Excelente atención, transparencia y respeto.”</em> – Luis C., Alemania</p>
-    <p><strong>¿Tienes un caso similar? <a href="#contacto">Escríbenos ahora</a> o revisa nuestro <a href="legal.html">aviso legal</a>.</strong></p>
-  </section>
-
-  <section id="contacto" class="contact">
-    <h2>Contáctanos</h2>
-    <p><strong>Ubicación:</strong> Edificio Ítalo Peruano de Seguros, Lima 01 – Perú</p>
-    <p><strong>Correo:</strong> <a href="mailto:exequaturperu@gmail.com">exequaturperu@gmail.com</a></p>
-    <p><strong>Teléfonos:</strong> <a href="tel:+51991296777">+51 991 296 777</a>, <a href="tel:+51988521023">+51 988 521 023</a></p>
-    <p><a href="https://wa.me/51991296777">Contáctanos por WhatsApp</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 EXEQUATUR PERÚ. Todos los derechos reservados.</p>
-    <div class="social-icons">
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <div class="service-card">
+      <i class="fas fa-user-minus"></i>
+      <h3>Divorcios</h3>
+      <p>Tramitamos divorcios notariales, judiciales y municipales.</p>
     </div>
-  </footer>
+    <div class="service-card">
+      <i class="fas fa-children"></i>
+      <h3>Derecho Familiar</h3>
+      <p>Tenencia, alimentos, visitas y protección familiar.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-passport"></i>
+      <h3>Trámites Civiles</h3>
+      <p>Inscripción de nacimientos, matrimonios y otros actos.</p>
+    </div>
+  </div>
+</section>
 
-  <a href="https://wa.me/51991296777" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+<section class="testimonios" id="testimonios">
+  <h2>Testimonios Reales</h2>
+  <div class="testimonio">“Gracias a EXEQUATUR PERÚ validé mi divorcio desde Alemania sin viajar.” – <strong>María G.</strong></div>
+  <div class="testimonio">“Recibí atención profesional desde España, con resultados rápidos.” – <strong>Carlos V.</strong></div>
+  <div class="testimonio">“Pude registrar el nacimiento de mi hijo nacido en Italia en Perú.” – <strong>Lucía R.</strong></div>
+</section>
+
+<section class="director" id="director">
+  <h2>Sobre el Director</h2>
+  <img src="img/director.jpg" alt="Director Jurídico">
+  <p>Abogado con más de 10 años de experiencia en derecho internacional privado, con especialización en validación de sentencias extranjeras, derecho de familia y procedimientos administrativos.</p>
+  <a href="director.html" class="btn">Ver perfil completo</a>
+</section>
+
+<div class="whatsapp">
+  <a href="https://wa.me/51999999999" target="_blank" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2025 EXEQUATUR PERÚ - Todos los derechos reservados</p>
+  <div class="redes">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+  </div>
+</footer>
 
 </body>
 </html>
