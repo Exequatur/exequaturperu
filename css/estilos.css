@@ -125,3 +125,24 @@ h1, h2, h3 {
     font-size: 0.9rem;
   }
 }
+/* PREVENCIÓN GLOBAL DE DESBORDES EN MÓVILES */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Asegura que la sección de contacto no se desborde */
+#contacto > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+#contacto > div > div {
+  flex: 1 1 300px;
+  max-width: 100%;
+}
