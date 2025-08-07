@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diagnóstico de Viabilidad - Exequátur Perú</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 40px; }
+    .container { background: white; padding: 30px; border-radius: 10px; max-width: 700px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1 { color: #003366; }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input, select, button { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+    button { background-color: #003366; color: white; font-weight: bold; margin-top: 20px; cursor: pointer; }
+    button:hover { background-color: #005599; }
+    .result { margin-top: 20px; font-size: 1.1em; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Diagnóstico de Viabilidad del Exequátur</h1>
+    <form id="diagnosticoForm">
+      <label for="sentenciaFirme">¿La sentencia de divorcio es firme y definitiva?</label>
+      <select id="sentenciaFirme">
+        <option value="sí">Sí</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="apostilla">¿Está apostillada conforme al Convenio de La Haya?</label>
+      <select id="apostilla">
+        <option value="sí">Sí</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="traduccion">¿Está traducida por traductor público juramentado ante el Ministerio de Relaciones Exteriores del Perú?</label>
+      <select id="traduccion">
+        <option value="sí">Sí</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="domicilioDemandado">¿El demandado fue válidamente notificado?</label>
+      <select id="domicilioDemandado">
+        <option value="sí">Sí</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="mutuoConsentimiento">¿Fue por mutuo consentimiento?</label>
+      <select id="mutuoConsentimiento">
+        <option value="sí">Sí</option>
+        <option value="no">No</option>
+      </select>
+
+      <button type="button" onclick="evaluar()">Evaluar Viabilidad</button>
+    </form>
+    <div class="result" id="resultado"></div>
+  </div>
+
+  <script>
+    function evaluar() {
+      const sentencia = document.getElementById('sentenciaFirme').value;
+      const apostilla = document.getElementById('apostilla').value;
+      const traduccion = document.getElementById('traduccion').value;
+      const notificado = document.getElementById('domicilioDemandado').value;
+      const mutuo = document.getElementById('mutuoConsentimiento').value;
+
+      let resultado = "Resultado: ";
+
+      if (sentencia === "sí" && apostilla === "sí" && traduccion === "sí" && notificado === "sí") {
+        resultado += "Alta viabilidad para iniciar el proceso de exequátur.";
+      } else if (sentencia === "no") {
+        resultado += "Debe esperar a que la sentencia sea firme y definitiva.";
+      } else if (apostilla === "no") {
+        resultado += "Debe apostillarse conforme al Convenio de La Haya.";
+      } else if (traduccion === "no") {
+        resultado += "Debe contar con traducción oficial por traductor juramentado reconocido por el Ministerio de Relaciones Exteriores del Perú.";
+      } else if (notificado === "no") {
+        resultado += "Debe acreditarse que el demandado fue notificado válidamente.";
+      } else {
+        resultado += "Faltan requisitos para una evaluación favorable.";
+      }
+
+      document.getElementById("resultado").innerText = resultado;
+    }
+  </script>
+</body>
+</html>
