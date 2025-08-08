@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evaluación Profesional | EXEQUATUR PERÚ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-relaxed text-gray-800">
+
+  <div class="max-w-2xl mx-auto p-6 bg-white rounded-xl shadow-md mt-10">
+    <h1 class="text-3xl font-bold text-blue-800 mb-4">Evaluación Profesional</h1>
+    <p class="mb-4 text-lg">
+      Si necesitas confirmar la viabilidad de tu sentencia extranjera de divorcio con seguridad legal, podemos hacer una revisión profesional de tu caso.
+    </p>
+    <p class="mb-6 text-md text-gray-700">
+      Nuestro equipo verificará si existen inconsistencias en nombres, fechas o formatos, y validaremos los documentos para iniciar el trámite legal.
+    </p>
+
+    <form class="space-y-4" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" enctype="multipart/form-data">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="tu-correo@paypal.com">
+      <input type="hidden" name="item_name" value="Evaluación profesional de sentencia extranjera">
+      <input type="hidden" name="amount" value="30.00">
+      <input type="hidden" name="currency_code" value="USD">
+
+      <div>
+        <label class="block mb-1 font-medium">Tu nombre completo</label>
+        <input type="text" name="nombre" required class="w-full border px-3 py-2 rounded" />
+      </div>
+
+      <div>
+        <label class="block mb-1 font-medium">Correo electrónico</label>
+        <input type="email" name="email" required class="w-full border px-3 py-2 rounded" />
+      </div>
+
+      <div>
+        <label class="block mb-1 font-medium">Comentario o consulta (opcional)</label>
+        <textarea name="comentario" class="w-full border px-3 py-2 rounded" rows="3"></textarea>
+      </div>
+
+      <div class="text-sm text-gray-700">
+        Luego de realizar el pago, recibirás un correo de confirmación. Podrás enviarnos tu sentencia por ese medio o vía WhatsApp.
+      </div>
+
+      <button type="submit" class="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-900 transition mt-4">
+        Pagar USD 30 y solicitar evaluación
+      </button>
+    </form>
+  </div>
+
+</body>
+</html>

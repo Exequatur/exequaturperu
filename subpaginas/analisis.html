@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Análisis Profesional - Exequatur</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <div class="max-w-3xl mx-auto p-6 bg-white shadow-md rounded mt-10">
+    <h1 class="text-2xl font-bold text-blue-900 mb-4">Análisis Profesional de Sentencia de Divorcio</h1>
+    <p class="mb-4">Gracias por completar la evaluación preliminar. Si deseas una verificación profesional y personalizada, puedes enviarnos una copia escaneada de tu sentencia extranjera. Nosotros accederemos al acta de matrimonio peruano (RENIEC o Ministerio de Relaciones Exteriores) y realizaremos un análisis legal completo.</p>
+
+    <form action="https://formspree.io/f/yourformid" method="POST" enctype="multipart/form-data" class="space-y-4">
+      <div>
+        <label class="block font-semibold">Nombre completo</label>
+        <input type="text" name="nombre" required class="w-full border border-gray-300 rounded p-2" />
+      </div>
+      <div>
+        <label class="block font-semibold">Correo electrónico</label>
+        <input type="email" name="correo" required class="w-full border border-gray-300 rounded p-2" />
+      </div>
+      <div>
+        <label class="block font-semibold">Número de WhatsApp</label>
+        <input type="text" name="telefono" class="w-full border border-gray-300 rounded p-2" />
+      </div>
+      <div>
+        <label class="block font-semibold">Sube tu sentencia de divorcio (PDF o imagen)</label>
+        <input type="file" name="sentencia" accept=".pdf,.jpg,.jpeg,.png" required class="w-full" />
+      </div>
+
+      <button type="submit" class="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-900 transition">Enviar Análisis</button>
+    </form>
+
+    <div class="mt-8 text-center">
+      <h2 class="text-lg font-bold text-gray-700">Costo del Análisis: USD 50</h2>
+      <p class="mb-2">Incluye revisión completa de documentos y asesoría legal profesional.</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="tu-correo@paypal.com">
+        <input type="hidden" name="item_name" value="Análisis Profesional de Sentencia">
+        <input type="hidden" name="amount" value="50.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <button type="submit" class="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600 transition">
+          Pagar con PayPal
+        </button>
+      </form>
+    </div>
+
+    <div class="mt-6 text-center">
+      <a href="https://wa.me/51988521023" class="inline-block text-green-600 font-semibold hover:underline">¿Tienes dudas? Escríbenos al WhatsApp: +51 988 521 023</a>
+    </div>
+  </div>
+
+</body>
+</html>
