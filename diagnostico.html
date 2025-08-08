@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Diagnóstico de Viabilidad | EXEQUATUR PERÚ</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -11,7 +11,7 @@
   <div class="max-w-2xl mx-auto p-6 bg-white rounded-xl shadow-md mt-10">
     <h1 class="text-3xl font-bold text-blue-800 mb-4">Diagnóstico de Viabilidad</h1>
     <p class="mb-6 text-lg">
-      Responde brevemente este formulario para saber si tu sentencia extranjera de divorcio es viable para ser reconocida judicialmente en Perú mediante el proceso de exequátur.
+      Responde este breve cuestionario para verificar si tu sentencia extranjera de divorcio cumple con los requisitos esenciales para ser reconocida judicialmente en Perú mediante el proceso de exequátur.
     </p>
 
     <form id="diagnosticoForm" class="space-y-6">
@@ -44,19 +44,28 @@
 
       <!-- Pregunta 4 -->
       <div>
-        <label class="block text-lg font-medium mb-2">4. ¿La sentencia está apostillada o legalizada?</label>
+        <label class="block text-lg font-medium mb-2">4. ¿La sentencia está apostillada o legalizada conforme al Convenio de La Haya?</label>
         <div class="flex gap-4">
           <label><input type="radio" name="preg4" value="si" required> Sí</label>
           <label><input type="radio" name="preg4" value="no"> No</label>
         </div>
       </div>
 
-      <!-- Pregunta 5 -->
+      <!-- Nueva pregunta: Coincidencia de nombres -->
       <div>
-        <label class="block text-lg font-medium mb-2">5. ¿Está traducida al español por traductor oficial si está en otro idioma?</label>
+        <label class="block text-lg font-medium mb-2">5. ¿Los nombres y apellidos en la sentencia coinciden exactamente con los del acta de matrimonio peruano?</label>
         <div class="flex gap-4">
           <label><input type="radio" name="preg5" value="si" required> Sí</label>
           <label><input type="radio" name="preg5" value="no"> No</label>
+        </div>
+      </div>
+
+      <!-- Nueva pregunta: Coincidencia de fecha -->
+      <div>
+        <label class="block text-lg font-medium mb-2">6. ¿La fecha de matrimonio en la sentencia coincide con la del acta de matrimonio peruano?</label>
+        <div class="flex gap-4">
+          <label><input type="radio" name="preg6" value="si" required> Sí</label>
+          <label><input type="radio" name="preg6" value="no"> No</label>
         </div>
       </div>
 
@@ -67,43 +76,44 @@
     <div id="resultado" class="mt-8 p-4 rounded-md hidden"></div>
   </div>
 
- <!-- ... (todo el contenido anterior igual, hasta el script) -->
+  <script>
+    document.getElementById('diagnosticoForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const respuestas = [
+        form.preg1.value,
+        form.preg2.value,
+        form.preg3.value,
+        form.preg4.value,
+        form.preg5.value,
+        form.preg6.value
+      ];
 
-<script>
-  document.getElementById('diagnosticoForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const form = e.target;
-    const respuestas = [
-      form.preg1.value,
-      form.preg2.value,
-      form.preg3.value,
-      form.preg4.value,
-      form.preg5.value
-    ];
+      const resultadoDiv = document.getElementById('resultado');
+      resultadoDiv.classList.remove('hidden');
 
-    const resultadoDiv = document.getElementById('resultado');
-    resultadoDiv.classList.remove('hidden');
+      if (respuestas.every(r => r === 'si')) {
+        resultadoDiv.className = "mt-8 p-4 bg-green-100 text-green-800 rounded-md";
+        resultadoDiv.innerHTML = `
+          <strong>✅ ¡Tu sentencia parece viable!</strong><br>
+          Cumples con los requisitos esenciales para solicitar el exequátur en Perú.<br><br>
+          Podemos asesorarte y encargarnos de todo el trámite.<br>
+          <a href="https://wa.me/51988521023?text=Hola%2C%20he%20completado%20el%20diagnóstico%20y%20mi%20sentencia%20es%20viable.%20Deseo%20iniciar%20la%20gestión%20del%20exequátur." 
+             target="_blank"
+             class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition">
+            Contactar a un abogado ahora por WhatsApp
+          </a>
+        `;
+      } else {
+        resultadoDiv.className = "mt-8 p-4 bg-yellow-100 text-yellow-800 rounded-md";
+        resultadoDiv.innerHTML = `
+          <strong>⚠️ Resultado preliminar:</strong><br>
+          Algunas condiciones no se cumplen completamente.<br><br>
+          No te preocupes: muchas veces podemos ayudarte a corregir o completar los requisitos legales.<br>
+          Contáctanos para una revisión profesional.`;
+      }
+    });
+  </script>
 
-    if (respuestas.every(r => r === 'si')) {
-      resultadoDiv.className = "mt-8 p-4 bg-green-100 text-green-800 rounded-md";
-      resultadoDiv.innerHTML = `
-        <strong>¡Buen resultado!</strong><br>
-        Tu sentencia cumple con los requisitos esenciales para ser reconocida mediante exequátur en Perú. <br><br>
-        <a href="https://wa.me/51988521023?text=Hola%2C%20mi%20sentencia%20es%20viable%20según%20el%20diagnóstico%20web%20y%20deseo%20asesoría%20legal%20para%20iniciar%20el%20trámite." 
-           target="_blank"
-           class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition">
-          Contactar a un abogado ahora por WhatsApp
-        </a>
-      `;
-    } else {
-      resultadoDiv.className = "mt-8 p-4 bg-yellow-100 text-yellow-800 rounded-md";
-      resultadoDiv.innerHTML = `
-        <strong>Resultado preliminar:</strong><br>
-        Algunas condiciones no se cumplen completamente. <br><br>
-        Es posible que aún puedas regularizar tu sentencia antes de solicitar el exequátur. 
-        <br>Te recomendamos una evaluación profesional detallada.`;
-    }
-  });
-</script>
-
-<!-- ... (fin del body y html) -->
+</body>
+</html>
