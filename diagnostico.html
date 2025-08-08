@@ -11,38 +11,34 @@
   <div class="max-w-2xl mx-auto p-6 bg-white rounded-xl shadow-md mt-10">
     <h1 class="text-3xl font-bold text-blue-800 mb-4">Diagnóstico de Viabilidad</h1>
     <p class="mb-6 text-lg">
-      Responde este breve cuestionario para verificar si tu sentencia extranjera de divorcio cumple con los requisitos esenciales para ser reconocida judicialmente en Perú mediante el proceso de exequátur.
+      Responde este breve cuestionario para saber si tu sentencia extranjera de divorcio cumple con los requisitos básicos para ser reconocida en Perú mediante el exequátur.
     </p>
 
     <form id="diagnosticoForm" class="space-y-6">
-      <!-- Pregunta 1 -->
       <div>
-        <label class="block text-lg font-medium mb-2">1. ¿La sentencia es firme (sin posibilidad de apelación)?</label>
+        <label class="block text-lg font-medium mb-2">1. ¿La sentencia está en firme (sin posibilidad de apelación)?</label>
         <div class="flex gap-4">
           <label><input type="radio" name="preg1" value="si" required> Sí</label>
           <label><input type="radio" name="preg1" value="no"> No</label>
         </div>
       </div>
 
-      <!-- Pregunta 2 -->
       <div>
-        <label class="block text-lg font-medium mb-2">2. ¿La sentencia ha sido emitida por un juez competente en el país de origen?</label>
+        <label class="block text-lg font-medium mb-2">2. ¿La sentencia fue emitida por un juez competente en el país de origen?</label>
         <div class="flex gap-4">
           <label><input type="radio" name="preg2" value="si" required> Sí</label>
           <label><input type="radio" name="preg2" value="no"> No</label>
         </div>
       </div>
 
-      <!-- Pregunta 3 -->
       <div>
-        <label class="block text-lg font-medium mb-2">3. ¿Fue debidamente notificada la otra parte durante el proceso judicial?</label>
+        <label class="block text-lg font-medium mb-2">3. ¿Fue notificada la otra parte durante el proceso judicial?</label>
         <div class="flex gap-4">
           <label><input type="radio" name="preg3" value="si" required> Sí</label>
           <label><input type="radio" name="preg3" value="no"> No</label>
         </div>
       </div>
 
-      <!-- Pregunta 4 -->
       <div>
         <label class="block text-lg font-medium mb-2">4. ¿La sentencia está apostillada o legalizada conforme al Convenio de La Haya?</label>
         <div class="flex gap-4">
@@ -51,28 +47,9 @@
         </div>
       </div>
 
-      <!-- Nueva pregunta: Coincidencia de nombres -->
-      <div>
-        <label class="block text-lg font-medium mb-2">5. ¿Los nombres y apellidos en la sentencia coinciden exactamente con los del acta de matrimonio peruano?</label>
-        <div class="flex gap-4">
-          <label><input type="radio" name="preg5" value="si" required> Sí</label>
-          <label><input type="radio" name="preg5" value="no"> No</label>
-        </div>
-      </div>
-
-      <!-- Nueva pregunta: Coincidencia de fecha -->
-      <div>
-        <label class="block text-lg font-medium mb-2">6. ¿La fecha de matrimonio en la sentencia coincide con la del acta de matrimonio peruano?</label>
-        <div class="flex gap-4">
-          <label><input type="radio" name="preg6" value="si" required> Sí</label>
-          <label><input type="radio" name="preg6" value="no"> No</label>
-        </div>
-      </div>
-
       <button type="submit" class="mt-4 bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-900 transition">Evaluar Viabilidad</button>
     </form>
 
-    <!-- Resultado -->
     <div id="resultado" class="mt-8 p-4 rounded-md hidden"></div>
   </div>
 
@@ -84,9 +61,7 @@
         form.preg1.value,
         form.preg2.value,
         form.preg3.value,
-        form.preg4.value,
-        form.preg5.value,
-        form.preg6.value
+        form.preg4.value
       ];
 
       const resultadoDiv = document.getElementById('resultado');
@@ -96,7 +71,7 @@
         resultadoDiv.className = "mt-8 p-4 bg-green-100 text-green-800 rounded-md";
         resultadoDiv.innerHTML = `
           <strong>✅ ¡Tu sentencia parece viable!</strong><br>
-          Cumples con los requisitos esenciales para solicitar el exequátur en Perú.<br><br>
+          Cumples con los requisitos básicos para solicitar el exequátur en Perú.<br><br>
           Podemos asesorarte y encargarnos de todo el trámite.<br>
           <a href="https://wa.me/51988521023?text=Hola%2C%20he%20completado%20el%20diagnóstico%20y%20mi%20sentencia%20es%20viable.%20Deseo%20iniciar%20la%20gestión%20del%20exequátur." 
              target="_blank"
@@ -109,8 +84,11 @@
         resultadoDiv.innerHTML = `
           <strong>⚠️ Resultado preliminar:</strong><br>
           Algunas condiciones no se cumplen completamente.<br><br>
-          No te preocupes: muchas veces podemos ayudarte a corregir o completar los requisitos legales.<br>
-          Contáctanos para una revisión profesional.`;
+          Te recomendamos una <strong>evaluación profesional</strong> para revisar la viabilidad legal completa.<br><br>
+          <a href="evaluacion.html" class="inline-block mt-4 bg-yellow-500 text-white px-5 py-2 rounded hover:bg-yellow-600 transition">
+            Solicitar evaluación profesional (USD 30)
+          </a>
+        `;
       }
     });
   </script>
