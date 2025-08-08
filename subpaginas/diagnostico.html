@@ -1,86 +1,96 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Diagnóstico de Viabilidad - Exequátur Perú</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 40px; }
-    .container { background: white; padding: 30px; border-radius: 10px; max-width: 700px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    h1 { color: #003366; }
-    label { display: block; margin-top: 15px; font-weight: bold; }
-    input, select, button { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
-    button { background-color: #003366; color: white; font-weight: bold; margin-top: 20px; cursor: pointer; }
-    button:hover { background-color: #005599; }
-    .result { margin-top: 20px; font-size: 1.1em; font-weight: bold; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico de Viabilidad | EXEQUATUR PERÚ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="container">
-    <h1>Diagnóstico de Viabilidad del Exequátur</h1>
-    <form id="diagnosticoForm">
-      <label for="sentenciaFirme">¿La sentencia de divorcio es firme y definitiva?</label>
-      <select id="sentenciaFirme">
-        <option value="sí">Sí</option>
-        <option value="no">No</option>
-      </select>
+<body class="bg-gray-100 font-sans leading-relaxed text-gray-800">
 
-      <label for="apostilla">¿Está apostillada conforme al Convenio de La Haya?</label>
-      <select id="apostilla">
-        <option value="sí">Sí</option>
-        <option value="no">No</option>
-      </select>
+  <div class="max-w-2xl mx-auto p-6 bg-white rounded-xl shadow-md mt-10">
+    <h1 class="text-3xl font-bold text-blue-800 mb-4">Diagnóstico de Viabilidad</h1>
+    <p class="mb-6 text-lg">
+      Responde brevemente este formulario para saber si tu sentencia extranjera de divorcio es viable para ser reconocida judicialmente en Perú mediante el proceso de exequátur.
+    </p>
 
-      <label for="traduccion">¿Está traducida por traductor público juramentado ante el Ministerio de Relaciones Exteriores del Perú?</label>
-      <select id="traduccion">
-        <option value="sí">Sí</option>
-        <option value="no">No</option>
-      </select>
+    <form id="diagnosticoForm" class="space-y-6">
+      <!-- Pregunta 1 -->
+      <div>
+        <label class="block text-lg font-medium mb-2">1. ¿La sentencia está en firme (sin posibilidad de apelación)?</label>
+        <div class="flex gap-4">
+          <label><input type="radio" name="preg1" value="si" required> Sí</label>
+          <label><input type="radio" name="preg1" value="no"> No</label>
+        </div>
+      </div>
 
-      <label for="domicilioDemandado">¿El demandado fue válidamente notificado?</label>
-      <select id="domicilioDemandado">
-        <option value="sí">Sí</option>
-        <option value="no">No</option>
-      </select>
+      <!-- Pregunta 2 -->
+      <div>
+        <label class="block text-lg font-medium mb-2">2. ¿La sentencia ha sido emitida por un juez competente en el país de origen?</label>
+        <div class="flex gap-4">
+          <label><input type="radio" name="preg2" value="si" required> Sí</label>
+          <label><input type="radio" name="preg2" value="no"> No</label>
+        </div>
+      </div>
 
-      <label for="mutuoConsentimiento">¿Fue por mutuo consentimiento?</label>
-      <select id="mutuoConsentimiento">
-        <option value="sí">Sí</option>
-        <option value="no">No</option>
-      </select>
+      <!-- Pregunta 3 -->
+      <div>
+        <label class="block text-lg font-medium mb-2">3. ¿Fue debidamente notificada la otra parte durante el proceso judicial?</label>
+        <div class="flex gap-4">
+          <label><input type="radio" name="preg3" value="si" required> Sí</label>
+          <label><input type="radio" name="preg3" value="no"> No</label>
+        </div>
+      </div>
 
-      <button type="button" onclick="evaluar()">Evaluar Viabilidad</button>
+      <!-- Pregunta 4 -->
+      <div>
+        <label class="block text-lg font-medium mb-2">4. ¿La sentencia está apostillada o legalizada?</label>
+        <div class="flex gap-4">
+          <label><input type="radio" name="preg4" value="si" required> Sí</label>
+          <label><input type="radio" name="preg4" value="no"> No</label>
+        </div>
+      </div>
+
+      <!-- Pregunta 5 -->
+      <div>
+        <label class="block text-lg font-medium mb-2">5. ¿Está traducida al español por traductor oficial si está en otro idioma?</label>
+        <div class="flex gap-4">
+          <label><input type="radio" name="preg5" value="si" required> Sí</label>
+          <label><input type="radio" name="preg5" value="no"> No</label>
+        </div>
+      </div>
+
+      <button type="submit" class="mt-4 bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-900 transition">Evaluar Viabilidad</button>
     </form>
-    <div class="result" id="resultado"></div>
+
+    <!-- Resultado -->
+    <div id="resultado" class="mt-8 p-4 rounded-md hidden"></div>
   </div>
 
   <script>
-    function evaluar() {
-      const sentencia = document.getElementById('sentenciaFirme').value;
-      const apostilla = document.getElementById('apostilla').value;
-      const traduccion = document.getElementById('traduccion').value;
-      const notificado = document.getElementById('domicilioDemandado').value;
-      const mutuo = document.getElementById('mutuoConsentimiento').value;
+    document.getElementById('diagnosticoForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const respuestas = [
+        form.preg1.value,
+        form.preg2.value,
+        form.preg3.value,
+        form.preg4.value,
+        form.preg5.value
+      ];
 
-      let resultado = "Resultado: ";
+      const resultadoDiv = document.getElementById('resultado');
+      resultadoDiv.classList.remove('hidden');
 
-      if (sentencia === "sí" && apostilla === "sí" && traduccion === "sí" && notificado === "sí") {
-        resultado += "Alta viabilidad para iniciar el proceso de exequátur.";
-      } else if (sentencia === "no") {
-        resultado += "Debe esperar a que la sentencia sea firme y definitiva.";
-      } else if (apostilla === "no") {
-        resultado += "Debe apostillarse conforme al Convenio de La Haya.";
-      } else if (traduccion === "no") {
-        resultado += "Debe contar con traducción oficial por traductor juramentado reconocido por el Ministerio de Relaciones Exteriores del Perú.";
-      } else if (notificado === "no") {
-        resultado += "Debe acreditarse que el demandado fue notificado válidamente.";
+      if (respuestas.every(r => r === 'si')) {
+        resultadoDiv.className = "mt-8 p-4 bg-green-100 text-green-800 rounded-md";
+        resultadoDiv.innerHTML = "<strong>¡Buen resultado!</strong><br>Tu sentencia cumple con los requisitos esenciales para ser reconocida mediante exequátur en Perú. Podemos ayudarte a iniciar el trámite legal.";
       } else {
-        resultado += "Faltan requisitos para una evaluación favorable.";
+        resultadoDiv.className = "mt-8 p-4 bg-yellow-100 text-yellow-800 rounded-md";
+        resultadoDiv.innerHTML = "<strong>Resultado preliminar:</strong><br>Algunas condiciones no se cumplen completamente. Es posible que aún puedas regularizar tu sentencia antes de solicitar el exequátur. Te recomendamos una revisión profesional.";
       }
-
-      document.getElementById("resultado").innerText = resultado;
-    }
+    });
   </script>
+
 </body>
 </html>
