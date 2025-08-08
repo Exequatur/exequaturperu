@@ -67,30 +67,43 @@
     <div id="resultado" class="mt-8 p-4 rounded-md hidden"></div>
   </div>
 
-  <script>
-    document.getElementById('diagnosticoForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const form = e.target;
-      const respuestas = [
-        form.preg1.value,
-        form.preg2.value,
-        form.preg3.value,
-        form.preg4.value,
-        form.preg5.value
-      ];
+ <!-- ... (todo el contenido anterior igual, hasta el script) -->
 
-      const resultadoDiv = document.getElementById('resultado');
-      resultadoDiv.classList.remove('hidden');
+<script>
+  document.getElementById('diagnosticoForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const respuestas = [
+      form.preg1.value,
+      form.preg2.value,
+      form.preg3.value,
+      form.preg4.value,
+      form.preg5.value
+    ];
 
-      if (respuestas.every(r => r === 'si')) {
-        resultadoDiv.className = "mt-8 p-4 bg-green-100 text-green-800 rounded-md";
-        resultadoDiv.innerHTML = "<strong>¡Buen resultado!</strong><br>Tu sentencia cumple con los requisitos esenciales para ser reconocida mediante exequátur en Perú. Podemos ayudarte a iniciar el trámite legal.";
-      } else {
-        resultadoDiv.className = "mt-8 p-4 bg-yellow-100 text-yellow-800 rounded-md";
-        resultadoDiv.innerHTML = "<strong>Resultado preliminar:</strong><br>Algunas condiciones no se cumplen completamente. Es posible que aún puedas regularizar tu sentencia antes de solicitar el exequátur. Te recomendamos una revisión profesional.";
-      }
-    });
-  </script>
+    const resultadoDiv = document.getElementById('resultado');
+    resultadoDiv.classList.remove('hidden');
 
-</body>
-</html>
+    if (respuestas.every(r => r === 'si')) {
+      resultadoDiv.className = "mt-8 p-4 bg-green-100 text-green-800 rounded-md";
+      resultadoDiv.innerHTML = `
+        <strong>¡Buen resultado!</strong><br>
+        Tu sentencia cumple con los requisitos esenciales para ser reconocida mediante exequátur en Perú. <br><br>
+        <a href="https://wa.me/51987654321?text=Hola%2C%20mi%20sentencia%20es%20viable%20según%20el%20diagnóstico%20web%20y%20deseo%20asesoría%20legal%20para%20iniciar%20el%20trámite." 
+           target="_blank"
+           class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition">
+          Contactar a un abogado ahora por WhatsApp
+        </a>
+      `;
+    } else {
+      resultadoDiv.className = "mt-8 p-4 bg-yellow-100 text-yellow-800 rounded-md";
+      resultadoDiv.innerHTML = `
+        <strong>Resultado preliminar:</strong><br>
+        Algunas condiciones no se cumplen completamente. <br><br>
+        Es posible que aún puedas regularizar tu sentencia antes de solicitar el exequátur. 
+        <br>Te recomendamos una evaluación profesional detallada.`;
+    }
+  });
+</script>
+
+<!-- ... (fin del body y html) -->
