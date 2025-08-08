@@ -1,59 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exequatur de Divorcio | EXEQUATUR PERÚ</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exequátur de Divorcio | EXEQUATUR PERÚ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-900">
-  <header class="bg-blue-900 text-white p-6 text-center">
-    <h1 class="text-3xl font-bold">Exequatur de Sentencia de Divorcio Extranjera</h1>
-    <p class="mt-2 text-lg">Asesoría especializada para validar tu divorcio en Perú</p>
-    <p class="mt-1 text-sm">Contáctanos por WhatsApp: <strong>+51 988 521 023</strong></p>
-  </header>
+<body class="bg-white text-gray-900 font-inter">
+    <header class="bg-blue-900 text-white p-6">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-semibold">Exequátur de Divorcio</h1>
+            <p class="text-sm mt-2">Validación de sentencias extranjeras en el Perú</p>
+        </div>
+    </header>
 
-  <main class="max-w-4xl mx-auto px-4 py-8 space-y-8">
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">¿Qué es el Exequátur?</h2>
-      <p>Es el procedimiento judicial mediante el cual una sentencia extranjera (por ejemplo, de divorcio) es reconocida y validada en Perú. Esto permite que tenga efectos legales en nuestro país, como su inscripción en registros civiles o su uso ante instituciones peruanas.</p>
-    </section>
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4">¿Qué es el Exequátur?</h2>
+            <p class="mb-4">El Exequátur es el proceso legal mediante el cual una sentencia extranjera, como un divorcio emitido fuera del Perú, puede ser reconocida oficialmente en territorio peruano. Es un procedimiento necesario para que la sentencia tenga efectos legales en el país.</p>
+        </section>
 
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">Pasos del servicio</h2>
-      <ul class="space-y-4">
-        <li class="bg-white p-4 rounded shadow">
-          <a href="diagnostico.html" class="text-blue-800 font-semibold hover:underline">🟢 Paso 1: Diagnóstico gratuito</a>
-          <p>Formulario inicial para saber si tu sentencia es viable.</p>
-        </li>
-        <li class="bg-white p-4 rounded shadow">
-          <a href="evaluacion.html" class="text-yellow-700 font-semibold hover:underline">🟡 Paso 2: Evaluación profesional</a>
-          <p>Verificación técnica y legal de los documentos. Incluye revisión profunda.</p>
-        </li>
-        <li class="bg-white p-4 rounded shadow">
-          <a href="analisis.html" class="text-green-700 font-semibold hover:underline">🔵 Paso 3: Análisis final</a>
-          <p>Revisión detallada con observaciones finales y lista de requisitos para iniciar el trámite.</p>
-        </li>
-      </ul>
-    </section>
+        <section class="bg-gray-100 p-6 rounded-lg mb-10">
+            <h3 class="text-xl font-semibold mb-4">Opción 1: Diagnóstico Gratuito</h3>
+            <p class="mb-4">Responde unas preguntas esenciales para saber si tu sentencia extranjera es viable para validación en Perú:</p>
+            <form action="mailto:exequaturperu@gmail.com" method="POST" enctype="text/plain" class="space-y-4">
+                <label class="block">
+                    <span class="block font-medium">1. ¿El divorcio fue emitido por una autoridad judicial?</span>
+                    <select class="mt-1 block w-full border-gray-300 rounded-md" name="judicial">
+                        <option>Sí</option>
+                        <option>No</option>
+                    </select>
+                </label>
+                <label class="block">
+                    <span class="block font-medium">2. ¿Tú o tu ex cónyuge son peruanos?</span>
+                    <select class="mt-1 block w-full border-gray-300 rounded-md" name="peruano">
+                        <option>Sí</option>
+                        <option>No</option>
+                    </select>
+                </label>
+                <label class="block">
+                    <span class="block font-medium">3. ¿La sentencia está traducida oficialmente al español (si no fue emitida en español)?</span>
+                    <select class="mt-1 block w-full border-gray-300 rounded-md" name="traduccion">
+                        <option>Sí</option>
+                        <option>No</option>
+                        <option>No aplica</option>
+                    </select>
+                </label>
+                <label class="block">
+                    <span class="block font-medium">4. ¿La sentencia está legalizada o apostillada?</span>
+                    <select class="mt-1 block w-full border-gray-300 rounded-md" name="apostilla">
+                        <option>Sí</option>
+                        <option>No</option>
+                    </select>
+                </label>
+                <button type="submit" class="bg-blue-800 text-white px-6 py-2 rounded-md hover:bg-blue-900 transition">
+                    Enviar Diagnóstico
+                </button>
+            </form>
+        </section>
 
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">Preguntas clave para determinar la viabilidad</h2>
-      <ul class="list-disc pl-6 space-y-2">
-        <li>¿La sentencia extranjera se encuentra debidamente firmada y traducida al español?</li>
-        <li>¿Se encuentra debidamente legalizada o apostillada?</li>
-        <li>¿Tanto en el acta de matrimonio peruano como en la sentencia extranjera hay coincidencia exacta en los nombres y apellidos?</li>
-        <li>¿La fecha de matrimonio consignada en la sentencia extranjera coincide con la del acta peruana?</li>
-      </ul>
-    </section>
+        <section class="bg-yellow-100 p-6 rounded-lg mb-10">
+            <h3 class="text-xl font-semibold mb-4">Opción 2: Análisis Legal Profesional</h3>
+            <p class="mb-4">Si deseas que un abogado especialista revise directamente tu sentencia extranjera, puedes solicitar un análisis completo. Nuestro equipo verificará todos los requisitos formales y legales.</p>
+            <ul class="list-disc list-inside mb-4">
+                <li>Validación de documento</li>
+                <li>Acceso a acta de matrimonio peruano (si corresponde)</li>
+                <li>Informe legal personalizado</li>
+                <li>Tiempo estimado: 1 a 2 días hábiles</li>
+            </ul>
+            <div class="mb-4">
+                <strong>Honorario por análisis legal: USD 50</strong>
+            </div>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="exequaturperu@gmail.com">
+                <input type="hidden" name="item_name" value="Análisis legal de sentencia extranjera de divorcio">
+                <input type="hidden" name="amount" value="50.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <button type="submit" class="bg-yellow-500 text-white px-6 py-2 rounded-md hover:bg-yellow-600 transition">
+                    Solicitar Análisis Legal
+                </button>
+            </form>
+        </section>
 
-    <section class="text-center mt-10">
-      <a href="https://wa.me/51988521023" target="_blank" class="inline-block bg-green-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-green-700 transition">Contáctanos por WhatsApp</a>
-    </section>
-  </main>
+        <section class="text-center mt-10">
+            <p class="text-gray-700">¿Tienes dudas? Escríbenos directamente por WhatsApp:</p>
+            <a href="https://wa.me/51912345678" target="_blank" class="inline-block mt-2 bg-green-500 text-white px-5 py-2 rounded-full hover:bg-green-600 transition">
+                Contactar por WhatsApp
+            </a>
+        </section>
+    </main>
 
-  <footer class="bg-blue-900 text-white text-center p-4 mt-10 text-sm">
-    &copy; 2025 EXEQUATUR PERÚ. Todos los derechos reservados.
-  </footer>
+    <footer class="bg-gray-100 text-center text-sm text-gray-600 py-6 mt-10">
+        © 2025 EXEQUATUR PERÚ. Todos los derechos reservados.
+    </footer>
 </body>
 </html>
