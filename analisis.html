@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnóstico Gratuito</title>
+    <title>Análisis Profesional</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50 font-sans leading-normal tracking-normal">
@@ -22,8 +22,8 @@
 <!-- Diagrama de pasos -->
 <div class="flex flex-col md:flex-row items-center justify-center my-8 space-y-6 md:space-y-0 md:space-x-6">
     <div class="flex items-center space-x-3">
-        <div class="bg-blue-900 border-4 border-blue-500 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold">1</div>
-        <span class="font-semibold text-blue-900">Diagnóstico</span>
+        <div class="bg-blue-300 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">1</div>
+        <span class="font-semibold">Diagnóstico</span>
     </div>
     <span class="hidden md:inline-block text-gray-500">➜</span>
     <div class="flex items-center space-x-3">
@@ -32,20 +32,29 @@
     </div>
     <span class="hidden md:inline-block text-gray-500">➜</span>
     <div class="flex items-center space-x-3">
-        <div class="bg-green-300 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">3</div>
-        <span class="font-semibold">Análisis</span>
+        <div class="bg-green-600 border-4 border-green-400 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold">3</div>
+        <span class="font-semibold text-green-700">Análisis</span>
     </div>
 </div>
 
 <main class="container mx-auto px-4 py-6">
-    <h2 class="text-2xl font-bold mb-4">Diagnóstico Gratuito</h2>
-    <p class="mb-4">Complete este breve formulario para una evaluación preliminar de su caso de exequátur de divorcio.</p>
-    <form class="bg-white p-6 rounded shadow-md space-y-4">
+    <h2 class="text-2xl font-bold mb-4">Análisis Profesional - USD 50</h2>
+    <p class="mb-4">Análisis legal completo, acceso a bases oficiales y verificación documental con RENIEC o Ministerio de Relaciones Exteriores.</p>
+    <form class="bg-white p-6 rounded shadow-md space-y-4 mb-4">
         <input type="text" placeholder="Nombre completo" class="w-full border p-2 rounded" required>
         <input type="email" placeholder="Correo electrónico" class="w-full border p-2 rounded" required>
-        <textarea placeholder="Comentarios" class="w-full border p-2 rounded"></textarea>
-        <button type="submit" class="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-900">Enviar</button>
+        <textarea placeholder="Detalles del caso" class="w-full border p-2 rounded"></textarea>
     </form>
+    <div class="text-center">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="exequaturperu@gmail.com">
+            <input type="hidden" name="item_name" value="Análisis Profesional">
+            <input type="hidden" name="amount" value="50.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="submit" value="Pagar con PayPal" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 cursor-pointer">
+        </form>
+    </div>
 </main>
 
 <a href="https://wa.me/51988521023" class="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition">📱</a>
