@@ -1,99 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Evaluación Legal | EXEQUATUR PERÚ</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación - Exequátur de Divorcio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
+        header { background: #002b5c; color: white; text-align: center; padding: 30px 20px; }
+        header h1 { margin: 0; }
+        .container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 30px; }
+        label { display: block; font-weight: bold; margin-top: 15px; }
+        input, button { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+        input[type="file"] { border: none; }
+        button { background: #ffc107; color: #002b5c; font-weight: bold; border: none; cursor: pointer; }
+        button:hover { background: #e0a800; }
+        .payment { margin-top: 30px; text-align: center; }
+        .payment img { max-width: 200px; margin: 10px auto; display: block; }
+        .guarantee { font-size: 0.9em; color: #555; margin-top: 10px; }
+        .thank-you { display: none; text-align: center; margin-top: 20px; }
+        .thank-you h2 { color: green; }
+        .btn-wa { display: inline-block; background: #25d366; color: white; padding: 10px 20px; margin-top: 15px; text-decoration: none; border-radius: 8px; font-weight: bold; }
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366; color: #FFF; border-radius: 50px;
+            text-align: center; font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 100;
+        }
+        .whatsapp-float i { margin-top: 16px; }
+    </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body>
 
-<header class="bg-blue-800 text-white py-4 shadow">
-  <div class="container mx-auto px-4 flex justify-between items-center">
-    <h1 class="text-lg font-bold">EXEQUATUR PERÚ</h1>
-    <nav class="space-x-4">
-      <a href="exequatur.html" class="hover:underline">Exequatur</a>
-      <a href="diagnostico.html" class="hover:underline">Diagnóstico</a>
-      <a href="evaluacion.html" class="hover:underline">Evaluación</a>
-      <a href="analisis.html" class="hover:underline">Análisis</a>
-    </nav>
-  </div>
+<header>
+    <h1>Evaluación Detallada</h1>
+    <p>Envíanos tu sentencia extranjera para una revisión profesional</p>
 </header>
 
-<!-- Diagrama con paso 2 activo -->
-<div class="container mx-auto px-4 py-8">
-  <div class="flex items-center justify-center mb-8 md:space-x-6">
-    <div class="flex items-center space-x-3">
-      <div class="bg-blue-200 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">1</div>
-      <span>Diagnóstico</span>
-    </div>
-    <span class="mx-4 text-gray-400 hidden md:inline">➜</span>
-    <div class="flex items-center space-x-3">
-      <div class="bg-yellow-500 border-4 border-yellow-300 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold">2</div>
-      <span class="font-semibold text-yellow-700">Evaluación</span>
-    </div>
-    <span class="mx-4 text-gray-400 hidden md:inline">➜</span>
-    <div class="flex items-center space-x-3">
-      <div class="bg-green-200 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">3</div>
-      <span>Análisis</span>
-    </div>
-  </div>
+<div class="container">
+    <form id="evaluationForm" action="https://formspree.io/f/your_form_id" method="POST" enctype="multipart/form-data">
+        <label>Nombre completo</label>
+        <input type="text" name="nombre" required>
 
-  <main class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
-    <h2 class="text-2xl font-bold mb-4">Evaluación Legal — USD 30</h2>
-    <p class="mb-4 text-sm text-gray-700">Sube tu sentencia extranjera (PDF o imagen). Con este servicio revisamos la documentación y te decimos si es viable o si requiere acciones previas.</p>
+        <label>Correo electrónico</label>
+        <input type="email" name="email" required>
 
-    <form id="evalForm" class="space-y-4" enctype="multipart/form-data" method="post">
-      <input type="text" name="nombre" placeholder="Nombre completo" class="w-full border p-2 rounded" required>
-      <input type="email" name="email" placeholder="Correo electrónico" class="w-full border p-2 rounded" required>
-      <label class="block">
-        <span class="font-medium">Sube tu sentencia (PDF, JPG, PNG)</span>
-        <input type="file" name="sentencia" accept=".pdf,.jpg,.jpeg,.png" class="mt-2" required>
-      </label>
-      <textarea name="observaciones" placeholder="Comentarios adicionales (opcional)" class="w-full border p-2 rounded"></textarea>
+        <label>Subir sentencia extranjera (PDF, JPG, PNG)</label>
+        <input type="file" name="sentencia" accept=".pdf,.jpg,.jpeg,.png" required>
+
+        <button type="submit">Enviar para Evaluación</button>
     </form>
 
-    <div class="mt-6 grid md:grid-cols-3 gap-4">
-      <!-- Tarjeta 1: PayPal / Tarjeta -->
-      <div class="border rounded p-4 shadow-sm text-center">
-        <h4 class="font-semibold mb-2">PayPal / Tarjeta</h4>
-        <p class="text-sm mb-3">Pago internacional y con tarjeta (Visa / Mastercard).</p>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="inline-block">
-          <input type="hidden" name="cmd" value="_xclick">
-          <input type="hidden" name="business" value="exequaturperu@gmail.com">
-          <input type="hidden" name="item_name" value="Evaluación Legal">
-          <input type="hidden" name="amount" value="30.00">
-          <input type="hidden" name="currency_code" value="USD">
-          <input type="submit" value="Pagar USD 30" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 cursor-pointer">
-        </form>
-      </div>
+    <div class="payment">
+        <h2>Opciones de Pago</h2>
+        <p>Puedes realizar el pago de la evaluación mediante PayPal, tarjeta VISA/Mastercard o Yape.</p>
 
-      <!-- Tarjeta 2: Yape -->
-      <div class="border rounded p-4 shadow-sm text-center">
-        <h4 class="font-semibold mb-2">Yape (Perú)</h4>
-        <p class="text-sm mb-3">Pago instantáneo con Yape. Escanea el QR o usa el número.</p>
-        <!-- Sustituye la imagen por el archivo real qr-991296777.png en la misma carpeta -->
-        <img src="qr-991296777.png" alt="QR Yape 991296777" class="mx-auto mb-3 w-44 h-44 object-contain">
-        <div class="font-medium">Número: <span class="text-gray-700">991296777</span></div>
-      </div>
+        <!-- PayPal -->
+        <div id="paypal-button-container"></div>
 
-      <!-- Tarjeta 3: WhatsApp -->
-      <div class="border rounded p-4 shadow-sm text-center">
-        <h4 class="font-semibold mb-2">Confirmar por WhatsApp</h4>
-        <p class="text-sm mb-3">Si prefieres, coordina el pago por WhatsApp y envíanos el comprobante.</p>
-        <a href="https://wa.me/51988521023?text=Hola%2C%20acabo%20de%20completar%20el%20formulario%20y%20deseo%20confirmar%20mi%20pago%20para%20el%20servicio%20de%20Evaluaci%C3%B3n%20Legal." target="_blank" class="inline-block bg-green-600 text-white px-4 py-2 rounded">Contactar y enviar comprobante</a>
-      </div>
+        <!-- Yape -->
+        <h3>Pagar con Yape</h3>
+        <img src="yape-991296777.png" alt="QR Yape 991296777">
+        <p>Número: <strong>991296777</strong></p>
+
+        <p class="guarantee">Su pago es 100% seguro y respaldado por EXEQUATUR PERÚ.</p>
     </div>
 
-    <p class="mt-4 text-xs text-gray-600">Después de realizar el pago por Yape, escríbenos por WhatsApp con el comprobante. Para PayPal/Tarjeta recibirás confirmación automática del pago.</p>
-  </main>
+    <div class="thank-you" id="thankYouMessage">
+        <h2>¡Gracias por enviar tu documentación!</h2>
+        <p>Nos pondremos en contacto contigo a la brevedad.</p>
+        <a href="https://wa.me/51988521023" class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Contactar por WhatsApp</a>
+    </div>
 </div>
 
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/51988521023?text=Hola%2C%20deseo%20coordinar%20mi%20Evaluaci%C3%B3n%20Legal." target="_blank" class="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg">📱</a>
+<a href="https://wa.me/51988521023" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
-<footer class="bg-gray-100 text-center py-4 mt-8">
-  &copy; 2025 EXEQUATUR PERÚ
-</footer>
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
+<script>
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: { value: '50.00' }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Pago completado por ' + details.payer.name.given_name);
+            });
+        }
+    }).render('#paypal-button-container');
+
+    document.getElementById('evaluationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('evaluationForm').style.display = 'none';
+        document.getElementById('thankYouMessage').style.display = 'block';
+    });
+</script>
+
 </body>
 </html>
