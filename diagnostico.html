@@ -1,118 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Diagnóstico Gratuito | EXEQUATUR PERÚ</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    .fade-in {
-      animation: fadeIn 0.5s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    input[type="radio"]:checked + span {
-      font-weight: bold;
-      color: #1d4ed8; /* Azul */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico - Exequátur de Divorcio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
+        header { background: #002b5c; color: white; text-align: center; padding: 30px 20px; }
+        header h1 { margin: 0; }
+        .container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 30px; }
+        .question { margin-bottom: 20px; }
+        label { display: block; font-weight: bold; margin-bottom: 8px; }
+        select { width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+        .btn { display: inline-block; padding: 12px 20px; background: #ffc107; color: #002b5c; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px; }
+        .btn:hover { background: #e0a800; }
+    </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body>
 
-<header class="bg-blue-800 text-white py-4 shadow">
-  <div class="container mx-auto px-4 flex justify-between items-center">
-    <h1 class="text-lg font-bold">EXEQUATUR PERÚ</h1>
-    <nav class="space-x-4">
-      <a href="exequatur.html" class="hover:underline">Exequatur</a>
-      <a href="diagnostico.html" class="hover:underline">Diagnóstico</a>
-      <a href="evaluacion.html" class="hover:underline">Evaluación</a>
-      <a href="analisis.html" class="hover:underline">Análisis</a>
-    </nav>
-  </div>
+<header>
+    <h1>Diagnóstico Preliminar</h1>
+    <p>Responde estas 4 preguntas para confirmar la viabilidad de tu exequátur</p>
 </header>
 
-<div class="container mx-auto px-4 py-8">
-  <main class="max-w-2xl mx-auto bg-white p-6 rounded shadow fade-in">
-    <h2 class="text-2xl font-bold mb-4">Diagnóstico Gratuito — Preguntas esenciales</h2>
-    <p class="mb-4 text-sm text-gray-700">
-      Responde rápidamente. Si la evaluación es favorable, podrás continuar a la evaluación pagada para envío de documentos.
-    </p>
-
-    <form id="diagForm" class="space-y-5">
-      <!-- Pregunta 1 -->
-      <div>
-        <label class="block font-medium mb-1">1. ¿La sentencia es firme (no hubo apelación)?</label>
-        <label class="mr-4 inline-flex items-center cursor-pointer">
-          <input type="radio" name="firme" value="si" class="hidden" required>
-          <span class="px-3 py-1 border rounded">Sí</span>
-        </label>
-        <label class="inline-flex items-center cursor-pointer">
-          <input type="radio" name="firme" value="no" class="hidden">
-          <span class="px-3 py-1 border rounded">No</span>
-        </label>
-      </div>
-
-      <!-- Pregunta 2 -->
-      <div>
-        <label class="block font-medium mb-1">2. ¿La sentencia está debidamente apostillada (Convenio de La Haya)?</label>
-        <label class="mr-4 inline-flex items-center cursor-pointer">
-          <input type="radio" name="apostillada" value="si" class="hidden" required>
-          <span class="px-3 py-1 border rounded">Sí</span>
-        </label>
-        <label class="inline-flex items-center cursor-pointer">
-          <input type="radio" name="apostillada" value="no" class="hidden">
-          <span class="px-3 py-1 border rounded">No</span>
-        </label>
-      </div>
-
-      <!-- Pregunta 3 -->
-      <div>
-        <label class="block font-medium mb-1">3. ¿El ex cónyuge fue debidamente notificado del proceso de divorcio?</label>
-        <label class="mr-4 inline-flex items-center cursor-pointer">
-          <input type="radio" name="notificado" value="si" class="hidden" required>
-          <span class="px-3 py-1 border rounded">Sí</span>
-        </label>
-        <label class="inline-flex items-center cursor-pointer">
-          <input type="radio" name="notificado" value="no" class="hidden">
-          <span class="px-3 py-1 border rounded">No</span>
-        </label>
-      </div>
-
-      <!-- Pregunta 4 -->
-      <div>
-        <label class="block font-medium mb-1">4. ¿El matrimonio se celebró en Perú o se inscribió en un consulado peruano?</label>
-        <label class="mr-4 inline-flex items-center cursor-pointer">
-          <input type="radio" name="inscrito" value="si" class="hidden" required>
-          <span class="px-3 py-1 border rounded">Sí</span>
-        </label>
-        <label class="inline-flex items-center cursor-pointer">
-          <input type="radio" name="inscrito" value="no" class="hidden">
-          <span class="px-3 py-1 border rounded">No</span>
-        </label>
-      </div>
-
-      <!-- Botones -->
-      <div class="flex items-center space-x-3">
-        <button type="submit" class="bg-blue-800 text-white px-5 py-2 rounded shadow hover:bg-blue-900">Evaluar</button>
-        <a href="https://wa.me/51988521023" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600">WhatsApp</a>
-      </div>
+<div class="container">
+    <form>
+        <div class="question">
+            <label>1. ¿La sentencia es firme (no hubo apelación)?</label>
+            <select required>
+                <option value="">Seleccione...</option>
+                <option>Sí</option>
+                <option>No</option>
+            </select>
+        </div>
+        <div class="question">
+            <label>2. ¿La sentencia está debidamente apostillada (Convenio de La Haya)?</label>
+            <select required>
+                <option value="">Seleccione...</option>
+                <option>Sí</option>
+                <option>No</option>
+            </select>
+        </div>
+        <div class="question">
+            <label>3. ¿El ex cónyuge fue debidamente notificado del proceso de divorcio?</label>
+            <select required>
+                <option value="">Seleccione...</option>
+                <option>Sí</option>
+                <option>No</option>
+            </select>
+        </div>
+        <div class="question">
+            <label>4. ¿El matrimonio se celebró en Perú o se inscribió en un consulado peruano?</label>
+            <select required>
+                <option value="">Seleccione...</option>
+                <option>Sí</option>
+                <option>No</option>
+            </select>
+        </div>
+        <a href="evaluacion.html" class="btn">Continuar</a>
     </form>
-
-    <div id="resultado" class="mt-6 hidden p-4 rounded fade-in"></div>
-  </main>
 </div>
 
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/51988521023" target="_blank" class="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition">📱</a>
-
-<footer class="bg-gray-100 text-center py-4 mt-8">
-  &copy; 2025 EXEQUATUR PERÚ
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
-
-
