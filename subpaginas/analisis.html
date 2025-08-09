@@ -1,69 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Análisis Profesional</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Análisis Profesional | EXEQUATUR PERÚ</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 font-sans leading-normal tracking-normal">
+<body class="bg-gray-50 font-sans">
 
 <header class="bg-blue-800 text-white py-4 shadow">
-    <div class="container mx-auto flex justify-between items-center px-4">
-        <h1 class="text-xl font-bold">EXEQUATUR PERÚ</h1>
-        <nav>
-            <a href="diagnostico.html" class="px-3 hover:underline">Diagnóstico</a>
-            <a href="evaluacion.html" class="px-3 hover:underline">Evaluación</a>
-            <a href="analisis.html" class="px-3 hover:underline">Análisis</a>
-        </nav>
-    </div>
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <h1 class="text-lg font-bold">EXEQUATUR PERÚ</h1>
+    <nav class="space-x-4">
+      <a href="exequatur.html" class="hover:underline">Exequatur</a>
+      <a href="diagnostico.html" class="hover:underline">Diagnóstico</a>
+      <a href="evaluacion.html" class="hover:underline">Evaluación</a>
+      <a href="analisis.html" class="hover:underline">Análisis</a>
+    </nav>
+  </div>
 </header>
 
-<!-- Diagrama de pasos -->
-<div class="flex flex-col md:flex-row items-center justify-center my-8 space-y-6 md:space-y-0 md:space-x-6">
+<!-- Diagrama paso 3 activo -->
+<div class="container mx-auto px-4 py-8">
+  <div class="flex items-center justify-center mb-8 md:space-x-6">
     <div class="flex items-center space-x-3">
-        <div class="bg-blue-300 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">1</div>
-        <span class="font-semibold">Diagnóstico</span>
+      <div class="bg-blue-200 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">1</div>
+      <span>Diagnóstico</span>
     </div>
-    <span class="hidden md:inline-block text-gray-500">➜</span>
+    <span class="mx-4 text-gray-400 hidden md:inline">➜</span>
     <div class="flex items-center space-x-3">
-        <div class="bg-yellow-300 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">2</div>
-        <span class="font-semibold">Evaluación</span>
+      <div class="bg-yellow-200 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">2</div>
+      <span>Evaluación</span>
     </div>
-    <span class="hidden md:inline-block text-gray-500">➜</span>
+    <span class="mx-4 text-gray-400 hidden md:inline">➜</span>
     <div class="flex items-center space-x-3">
-        <div class="bg-green-600 border-4 border-green-400 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold">3</div>
-        <span class="font-semibold text-green-700">Análisis</span>
+      <div class="bg-green-700 border-4 border-green-400 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold">3</div>
+      <span class="font-semibold text-green-700">Análisis</span>
     </div>
+  </div>
+
+  <main class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+    <h2 class="text-2xl font-bold mb-4">Análisis Profesional — USD 50</h2>
+    <p class="mb-4 text-sm text-gray-700">Envía la sentencia extranjera y, si la tienes, el acta de matrimonio peruano. Nosotros accederemos a RENIEC/RREE cuando sea necesario.</p>
+
+    <form id="analisisForm" class="space-y-4" enctype="multipart/form-data" method="post">
+      <input type="text" name="nombre" placeholder="Nombre completo" class="w-full border p-2 rounded" required>
+      <input type="email" name="email" placeholder="Correo electrónico" class="w-full border p-2 rounded" required>
+
+      <label class="block">
+        <span class="font-medium">Sube tu sentencia (PDF, JPG, PNG)</span>
+        <input type="file" name="sentencia" accept=".pdf,.jpg,.jpeg,.png" class="mt-2" required>
+      </label>
+
+      <label class="block">
+        <span class="font-medium">Sube el acta de matrimonio peruano (si la tiene)</span>
+        <input type="file" name="acta" accept=".pdf,.jpg,.jpeg,.png" class="mt-2">
+      </label>
+
+      <textarea name="observaciones" placeholder="Comentarios adicionales" class="w-full border p-2 rounded"></textarea>
+    </form>
+
+    <div class="mt-6 grid md:grid-cols-3 gap-4">
+      <!-- PayPal / Tarjeta -->
+      <div class="border rounded p-4 shadow-sm text-center">
+        <h4 class="font-semibold mb-2">PayPal / Tarjeta</h4>
+        <p class="text-sm mb-3">Pago internacional y con tarjeta (Visa / Mastercard).</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="inline-block">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="exequaturperu@gmail.com">
+          <input type="hidden" name="item_name" value="Análisis Profesional">
+          <input type="hidden" name="amount" value="50.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="submit" value="Pagar USD 50" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 cursor-pointer">
+        </form>
+      </div>
+
+      <!-- Yape -->
+      <div class="border rounded p-4 shadow-sm text-center">
+        <h4 class="font-semibold mb-2">Yape (Perú)</h4>
+        <p class="text-sm mb-3">Escanea el QR o transfiere al número.</p>
+        <img src="qr-991296777.png" alt="QR Yape 991296777" class="mx-auto mb-3 w-44 h-44 object-contain">
+        <div class="font-medium">Número: <span class="text-gray-700">991296777</span></div>
+      </div>
+
+      <!-- WhatsApp -->
+      <div class="border rounded p-4 shadow-sm text-center">
+        <h4 class="font-semibold mb-2">Confirmar por WhatsApp</h4>
+        <p class="text-sm mb-3">Coordina y envía el comprobante del pago.</p>
+        <a href="https://wa.me/51988521023?text=Hola%2C%20acabo%20de%20completar%20el%20formulario%20y%20deseo%20confirmar%20mi%20pago%20para%20el%20servicio%20de%20An%C3%A1lisis%20Profesional." target="_blank" class="inline-block bg-green-600 text-white px-4 py-2 rounded">Contactar y enviar comprobante</a>
+      </div>
+    </div>
+
+    <p class="mt-4 text-xs text-gray-600">Si pagas por Yape, por favor envía el comprobante por WhatsApp para confirmar y agendar la revisión.</p>
+  </main>
 </div>
 
-<main class="container mx-auto px-4 py-6">
-    <h2 class="text-2xl font-bold mb-4">Análisis Profesional - USD 50</h2>
-    <p class="mb-4">Análisis legal completo, acceso a bases oficiales y verificación documental con RENIEC o Ministerio de Relaciones Exteriores.</p>
-    <form class="bg-white p-6 rounded shadow-md space-y-4 mb-4">
-        <input type="text" placeholder="Nombre completo" class="w-full border p-2 rounded" required>
-        <input type="email" placeholder="Correo electrónico" class="w-full border p-2 rounded" required>
-        <textarea placeholder="Detalles del caso" class="w-full border p-2 rounded"></textarea>
-    </form>
-    <div class="text-center">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="business" value="exequaturperu@gmail.com">
-            <input type="hidden" name="item_name" value="Análisis Profesional">
-            <input type="hidden" name="amount" value="50.00">
-            <input type="hidden" name="currency_code" value="USD">
-            <input type="submit" value="Pagar con PayPal" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 cursor-pointer">
-        </form>
-    </div>
-</main>
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/51988521023?text=Hola%2C%20deseo%20coordinar%20mi%20An%C3%A1lisis%20Profesional." class="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg" target="_blank">📱</a>
 
-<a href="https://wa.me/51988521023" class="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition">📱</a>
-
-<footer class="bg-gray-800 text-white py-4 mt-8">
-    <div class="container mx-auto text-center">
-        &copy; 2025 EXEQUATUR PERÚ - Todos los derechos reservados
-    </div>
+<footer class="bg-gray-100 text-center py-4 mt-8">
+  &copy; 2025 EXEQUATUR PERÚ
 </footer>
-
 </body>
 </html>
