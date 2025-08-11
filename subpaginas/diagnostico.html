@@ -28,7 +28,7 @@
 
 <header>
     <h1>Diagnóstico Preliminar</h1>
-    <p>Responde estas 4 preguntas para recibir un informe inmediato sobre la viabilidad de tu exequátur</p>
+    <p>Responde estas 4 preguntas para recibir un análisis inmediato de tu situación</p>
 </header>
 
 <div class="container">
@@ -50,56 +50,4 @@
             </select>
         </div>
         <div class="question">
-            <label>3. ¿El ex cónyuge fue debidamente notificado del proceso de divorcio?</label>
-            <select name="p3" required>
-                <option value="">Seleccione...</option>
-                <option value="sí">Sí</option>
-                <option value="no">No</option>
-            </select>
-        </div>
-        <div class="question">
-            <label>4. ¿El matrimonio se celebró en Perú o se inscribió en un consulado peruano?</label>
-            <select name="p4" required>
-                <option value="">Seleccione...</option>
-                <option value="sí">Sí</option>
-                <option value="no">No</option>
-            </select>
-        </div>
-        <button type="submit" class="btn">Ver Informe</button>
-    </form>
-
-    <div class="result" id="resultado"></div>
-</div>
-
-<script>
-document.getElementById('diagnosticoForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const respuestas = Array.from(this.querySelectorAll('select')).map(s => s.value.toLowerCase());
-    const resultado = document.getElementById('resultado');
-
-    let mensaje = "<h3>Informe Preliminar</h3>";
-
-    if (respuestas.every(r => r === 'sí')) {
-        mensaje += "<p>Según las respuestas proporcionadas, su caso presenta condiciones favorables para iniciar el proceso de exequátur de divorcio.</p>";
-    } else {
-        mensaje += "<p>Su caso podría requerir revisiones adicionales. Algunas respuestas indican que podría ser necesaria documentación o acciones previas antes de presentar la solicitud.</p>";
-    }
-
-    mensaje += "<p>En todos los casos, recomendamos contactar a nuestros abogados especializados para recibir una evaluación profesional y garantizar que su proceso sea seguro, claro y rápido.</p>";
-
-    mensaje += `
-    <div class="contact-options">
-        <a href="https://wa.me/51999999999" target="_blank" class="contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <a href="tel:+51999999999" class="contact-btn phone"><i class="fas fa-phone"></i> Llamar</a>
-    </div>
-    `;
-
-    resultado.innerHTML = mensaje;
-    resultado.style.display = 'block';
-    resultado.scrollIntoView({ behavior: 'smooth' });
-});
-</script>
-
-</body>
-</html>
+            <label>3. ¿El ex cónyuge fue
