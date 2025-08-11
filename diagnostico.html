@@ -1,66 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnóstico - Exequátur de Divorcio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
-        header { background: #002b5c; color: white; text-align: center; padding: 30px 20px; }
-        header h1 { margin: 0; }
-        .container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 30px; }
-        .question { margin-bottom: 20px; }
-        label { display: block; font-weight: bold; margin-bottom: 8px; }
-        select { width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
-        .btn { display: inline-block; padding: 12px 20px; background: #ffc107; color: #002b5c; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px; }
-        .btn:hover { background: #e0a800; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagnóstico - Exequátur de Divorcio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
+    header { background: #002b5c; color: white; text-align: center; padding: 30px 20px; }
+    header h1 { margin: 0; font-size: 1.8em; }
+    .container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 30px; }
+    .question { margin-bottom: 20px; }
+    label { display: block; font-weight: bold; margin-bottom: 8px; }
+    select { width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    .btn { display: inline-block; padding: 12px 20px; background: #ffc107; color: #002b5c; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px; cursor: pointer; border: none; }
+    .btn:hover { background: #e0a800; }
+    .result { margin-top: 30px; padding: 20px; background: #eef5ff; border-left: 6px solid #002b5c; border-radius: 8px; display: none; }
+    .contact-options { margin-top: 20px; }
+    .contact-btn { display: inline-block; padding: 12px 18px; margin: 5px; border-radius: 8px; font-weight: bold; text-decoration: none; color: white; }
+    .whatsapp { background: #25D366; }
+    .whatsapp:hover { background: #1ebe5d; }
+    .phone { background: #002b5c; }
+    .phone:hover { background: #001a3a; }
+</style>
 </head>
 <body>
 
 <header>
     <h1>Diagnóstico Preliminar</h1>
-    <p>Responde estas 4 preguntas para confirmar la viabilidad de tu exequátur</p>
+    <p>Responde estas 4 preguntas para recibir un informe inmediato sobre la viabilidad de tu exequátur</p>
 </header>
 
 <div class="container">
-    <form>
+    <form id="diagnosticoForm">
         <div class="question">
             <label>1. ¿La sentencia es firme (no hubo apelación)?</label>
-            <select required>
+            <select name="p1" required>
                 <option value="">Seleccione...</option>
-                <option>Sí</option>
-                <option>No</option>
+                <option value="sí">Sí</option>
+                <option value="no">No</option>
             </select>
         </div>
         <div class="question">
             <label>2. ¿La sentencia está debidamente apostillada (Convenio de La Haya)?</label>
-            <select required>
+            <select name="p2" required>
                 <option value="">Seleccione...</option>
-                <option>Sí</option>
-                <option>No</option>
+                <option value="sí">Sí</option>
+                <option value="no">No</option>
             </select>
         </div>
         <div class="question">
             <label>3. ¿El ex cónyuge fue debidamente notificado del proceso de divorcio?</label>
-            <select required>
+            <select name="p3" required>
                 <option value="">Seleccione...</option>
-                <option>Sí</option>
-                <option>No</option>
+                <option value="sí">Sí</option>
+                <option value="no">No</option>
             </select>
         </div>
         <div class="question">
             <label>4. ¿El matrimonio se celebró en Perú o se inscribió en un consulado peruano?</label>
-            <select required>
+            <select name="p4" required>
                 <option value="">Seleccione...</option>
-                <option>Sí</option>
-                <option>No</option>
+                <option value="sí">Sí</option>
+                <option value="no">No</option>
             </select>
         </div>
-        <a href="evaluacion.html" class="btn">Continuar</a>
+        <button type="submit" class="btn">Ver Informe</button>
     </form>
+
+    <div class="result" id="resultado"></div>
 </div>
+
+<script>
+document.getElementById('diagnosticoForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const respuestas = Array.from(this.querySelectorAll('select')).map(s => s.value.toLowerCase());
+    const resultado = document.getElementById('resultado');
+
+    let mensaje = "<h3>Informe Preliminar</h3>";
+
+    if (respuestas.every(r => r === 'sí')) {
+        mensaje += "<p>Según las respuestas proporcionadas, su caso presenta condiciones favorables para iniciar el proceso de exequátur de divorcio.</p>";
+    } else {
+        mensaje += "<p>Su caso podría requerir revisiones adicionales. Algunas respuestas indican que podría ser necesaria documentación o acciones previas antes de presentar la solicitud.</p>";
+    }
+
+    mensaje += "<p>En todos los casos, recomendamos contactar a nuestros abogados especializados para recibir una evaluación profesional y garantizar que su proceso sea seguro, claro y rápido.</p>";
+
+    mensaje += `
+    <div class="contact-options">
+        <a href="https://wa.me/51999999999" target="_blank" class="contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="tel:+51999999999" class="contact-btn phone"><i class="fas fa-phone"></i> Llamar</a>
+    </div>
+    `;
+
+    resultado.innerHTML = mensaje;
+    resultado.style.display = 'block';
+    resultado.scrollIntoView({ behavior: 'smooth' });
+});
+</script>
 
 </body>
 </html>
