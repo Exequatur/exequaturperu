@@ -1,103 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluación - Exequátur de Divorcio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
-        header { background: #002b5c; color: white; text-align: center; padding: 30px 20px; }
-        header h1 { margin: 0; }
-        .container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 30px; }
-        label { display: block; font-weight: bold; margin-top: 15px; }
-        input, button { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
-        input[type="file"] { border: none; }
-        button { background: #ffc107; color: #002b5c; font-weight: bold; border: none; cursor: pointer; }
-        button:hover { background: #e0a800; }
-        .payment { margin-top: 30px; text-align: center; }
-        .payment img { max-width: 200px; margin: 10px auto; display: block; }
-        .guarantee { font-size: 0.9em; color: #555; margin-top: 10px; }
-        .thank-you { display: none; text-align: center; margin-top: 20px; }
-        .thank-you h2 { color: green; }
-        .btn-wa { display: inline-block; background: #25d366; color: white; padding: 10px 20px; margin-top: 15px; text-decoration: none; border-radius: 8px; font-weight: bold; }
-        .whatsapp-float {
-            position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366; color: #FFF; border-radius: 50px;
-            text-align: center; font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 100;
-        }
-        .whatsapp-float i { margin-top: 16px; }
-    </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Evaluación Legal — EXEQUATUR PERÚ</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#f7f8fb;margin:0;color:#222}
+.header{background:#002b5c;color:#fff;padding:28px 18px;text-align:center}
+.container{max-width:980px;margin:20px auto;padding:18px}
+.card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,0.06);margin-bottom:18px}
+.note{background:#e8f1ff;border-left:4px solid #2b7be4;padding:12px;border-radius:6px;color:#05386b}
+form label{display:block;margin:12px 0 6px;font-weight:600}
+input[type=text],input[type=email],textarea{width:100%;padding:10px;border-radius:6px;border:1px solid #ccd0d7}
+input[type=file]{margin-top:8px}
+.btn{display:inline-block;background:#ffc107;color:#002b5c;padding:10px 16px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;font-weight:700}
+.pay-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
+.pay-card{background:#fff;border-radius:8px;padding:14px;text-align:center;border:1px solid #eef2f6}
+.pay-card h4{margin:8px 0}
+.small{font-size:0.9em;color:#555}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:999}
+.hidden{display:none}
+.success{background:#e6ffed;border-left:4px solid #29a745;padding:12px;border-radius:6px;color:#245b2d;margin-top:12px}
+.error{background:#fff1f0;border-left:4px solid #d93025;padding:12px;border-radius:6px;color:#8a1f1f;margin-top:12px}
+.link-btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:8px;background:#2b7be4;color:#fff;text-decoration:none}
+</style>
 </head>
 <body>
-
-<header>
-    <h1>Evaluación Detallada</h1>
-    <p>Envíanos tu sentencia extranjera para una revisión profesional</p>
+<header class="header">
+  <h1>Evaluación Legal — EXEQUATUR PERÚ</h1>
+  <p>Servicio: revisión de sentencia extranjera (USD 80) — Envíanos tu documento y te decimos si es viable.</p>
 </header>
 
 <div class="container">
-    <form id="evaluationForm" action="https://formspree.io/f/your_form_id" method="POST" enctype="multipart/form-data">
-        <label>Nombre completo</label>
-        <input type="text" name="nombre" required>
+  <div class="card note">
+    <strong>ℹ Nota importante:</strong> Si no cuenta con el acta de matrimonio peruana, nuestro estudio puede obtenerla en Perú (RENIEC o Ministerio de Relaciones Exteriores) como parte del servicio.
+  </div>
 
-        <label>Correo electrónico</label>
-        <input type="email" name="email" required>
+  <div class="card">
+    <h2>Formulario — Envío de sentencia</h2>
+    <form id="evalForm" enctype="multipart/form-data" novalidate>
+      <label>Nombre completo</label>
+      <input type="text" name="nombre" required>
 
-        <label>Subir sentencia extranjera (PDF, JPG, PNG)</label>
-        <input type="file" name="sentencia" accept=".pdf,.jpg,.jpeg,.png" required>
+      <label>Correo electrónico</label>
+      <input type="email" name="email" required>
 
-        <button type="submit">Enviar para Evaluación</button>
+      <label>Subir sentencia extranjera (PDF, JPG, PNG)</label>
+      <input type="file" name="sentencia" accept=".pdf,.jpg,.jpeg,.png" required>
+
+      <input type="hidden" name="servicio" value="Evaluación (USD 80)">
+
+      <div style="margin-top:14px">
+        <button type="submit" class="btn">Enviar documentación</button>
+        <a class="link-btn" href="#payments">Ir a opciones de pago</a>
+      </div>
+
     </form>
 
-    <div class="payment">
-        <h2>Opciones de Pago</h2>
-        <p>Puedes realizar el pago de la evaluación mediante PayPal, tarjeta VISA/Mastercard o Yape.</p>
+    <div id="result" class="hidden"></div>
+  </div>
 
-        <!-- PayPal -->
-        <div id="paypal-button-container"></div>
+  <div id="payments" class="card">
+    <h2>Opciones de pago (USD)</h2>
+    <p class="small">Selecciona la forma de pago que prefieras. Pago 100% seguro garantizado por EXEQUATUR PERÚ.</p>
 
-        <!-- Yape -->
-        <h3>Pagar con Yape</h3>
-        <img src="yape-991296777.png" alt="QR Yape 991296777">
-        <p>Número: <strong>991296777</strong></p>
+    <div class="pay-grid">
+      <!-- PayPal / Card -->
+      <div class="pay-card" style="border-top:4px solid #0070ba">
+        <i class="fab fa-paypal" style="font-size:32px;color:#0070ba"></i>
+        <h4>PayPal / Tarjeta</h4>
+        <p class="small">Pago internacional y con tarjeta (Visa / Mastercard). Redirige a PayPal.</p>
+        <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="exequaturperu@gmail.com">
+          <input type="hidden" name="item_name" value="Evaluación Legal - EXEQUATUR PERU">
+          <input type="hidden" name="amount" value="80.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="submit" value="Pagar USD 80" class="btn">
+        </form>
+        <div class="small" style="margin-top:8px">Pago 100% seguro garantizado por EXEQUATUR PERÚ</div>
+      </div>
 
-        <p class="guarantee">Su pago es 100% seguro y respaldado por EXEQUATUR PERÚ.</p>
+      <!-- Yape -->
+      <div class="pay-card" style="border-top:4px solid #6f2dbd">
+        <i class="fas fa-qrcode" style="font-size:32px;color:#6f2dbd"></i>
+        <h4>Yape (Perú)</h4>
+        <p class="small">Escanea el QR o transfiere al número. Confirmar por WhatsApp.</p>
+        <img src="yape-991296777.png" alt="QR Yape" style="width:140px;height:140px;margin:8px auto;display:block;object-fit:contain">
+        <div class="small"><strong>Número:</strong> 991296777</div>
+        <div class="small" style="margin-top:8px">Pago 100% seguro garantizado por EXEQUATUR PERÚ</div>
+      </div>
+
+      <!-- BCP Transfer -->
+      <div class="pay-card" style="border-top:4px solid #ff8c00">
+        <i class="fas fa-university" style="font-size:32px;color:#ff8c00"></i>
+        <h4>Transferencia BCP (USD)</h4>
+        <p class="small">Cuenta corriente en dólares — enviar comprobante por WhatsApp o correo.</p>
+        <div class="small" style="text-align:left;margin-top:8px">
+          <strong>Banco:</strong> BCP<br>
+          <strong>Cuenta USD:</strong> 191-91612026-1-98<br>
+          <strong>CCI:</strong> 002-191-19161202619853<br>
+          <strong>Titular:</strong> Abog. Alex Pineda
+        </div>
+        <div class="small" style="margin-top:8px">Pago 100% seguro garantizado por EXEQUATUR PERÚ</div>
+      </div>
     </div>
 
-    <div class="thank-you" id="thankYouMessage">
-        <h2>¡Gracias por enviar tu documentación!</h2>
-        <p>Nos pondremos en contacto contigo a la brevedad.</p>
-        <a href="https://wa.me/51988521023" class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Contactar por WhatsApp</a>
+    <div style="text-align:center;margin-top:16px">
+      <a href="https://wa.me/51988521023?text=Hola%2C%20quisiera%20confirmar%20mi%20pago%20para%20la%20Evaluaci%C3%B3n%20Legal." target="_blank" class="btn" style="background:#25d366;color:white">Confirmar pago por WhatsApp</a>
     </div>
+  </div>
+
+  <p class="small" style="text-align:center;margin-top:8px">Después de realizar la transferencia por Yape o BCP, envía el comprobante por WhatsApp para confirmar y agendar la revisión.</p>
 </div>
 
-<a href="https://wa.me/51988521023" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
+<a class="whatsapp-float" href="https://wa.me/51988521023" target="_blank"><i class="fab fa-whatsapp" style="font-size:26px"></i></a>
 
-<script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
 <script>
-    paypal.Buttons({
-        createOrder: function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: { value: '50.00' }
-                }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Pago completado por ' + details.payer.name.given_name);
-            });
-        }
-    }).render('#paypal-button-container');
+const form = document.getElementById('evalForm');
+const resultBox = document.getElementById('result');
 
-    document.getElementById('evaluationForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        document.getElementById('evaluationForm').style.display = 'none';
-        document.getElementById('thankYouMessage').style.display = 'block';
-    });
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  resultBox.className = '';
+  resultBox.innerHTML = '<div class="small">Enviando, por favor espere...</div>';
+  const data = new FormData(form);
+  try {
+    const resp = await fetch('/enviar.php', { method: 'POST', body: data });
+    const json = await resp.json();
+    if (json.success) {
+      resultBox.className = 'success';
+      resultBox.innerHTML = '<strong>✅ Gracias — Hemos recibido su documentación.</strong><br>Nos comunicaremos a la brevedad.<br><a class="btn" href="#payments" style="margin-top:10px">Ir a opciones de pago</a> <a class="btn" href="https://wa.me/51988521023?text=Hola%2C%20acabo%20de%20enviar%20mi%20documentaci%C3%B3n%20para%20Evaluaci%C3%B3n." style="background:#25d366;color:#fff" target="_blank">Contactar por WhatsApp</a>';
+      form.reset();
+      window.scrollTo({ top: resultBox.offsetTop - 20, behavior: 'smooth' });
+    } else {
+      resultBox.className = 'error';
+      resultBox.innerHTML = '<strong>❌ Ocurrió un error:</strong> ' + (json.error || 'Inténtalo de nuevo');
+    }
+  } catch (err) {
+    resultBox.className = 'error';
+    resultBox.innerHTML = '<strong>❌ Error de conexión.</strong> Inténtalo nuevamente o escríbenos por WhatsApp.';
+  }
+});
 </script>
-
 </body>
 </html>
