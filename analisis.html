@@ -1,105 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Análisis Profesional | EXEQUATUR PERÚ</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Análisis Profesional — EXEQUATUR PERÚ</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#f7f8fb;margin:0;color:#222}
+.header{background:#002b5c;color:#fff;padding:28px 18px;text-align:center}
+.container{max-width:980px;margin:20px auto;padding:18px}
+.card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,0.06);margin-bottom:18px}
+.note{background:#e8f1ff;border-left:4px solid #2b7be4;padding:12px;border-radius:6px;color:#05386b}
+form label{display:block;margin:12px 0 6px;font-weight:600}
+input[type=text],input[type=email],textarea{width:100%;padding:10px;border-radius:6px;border:1px solid #ccd0d7}
+input[type=file]{margin-top:8px}
+.btn{display:inline-block;background:#ffc107;color:#002b5c;padding:10px 16px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;font-weight:700}
+.pay-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
+.pay-card{background:#fff;border-radius:8px;padding:14px;text-align:center;border:1px solid #eef2f6}
+.pay-card h4{margin:8px 0}
+.small{font-size:0.9em;color:#555}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:999}
+.hidden{display:none}
+.success{background:#e6ffed;border-left:4px solid #29a745;padding:12px;border-radius:6px;color:#245b2d;margin-top:12px}
+.error{background:#fff1f0;border-left:4px solid #d93025;padding:12px;border-radius:6px;color:#8a1f1f;margin-top:12px}
+.link-btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:8px;background:#2b7be4;color:#fff;text-decoration:none}
+</style>
 </head>
-<body class="bg-gray-50 font-sans">
-
-<header class="bg-blue-800 text-white py-4 shadow">
-  <div class="container mx-auto px-4 flex justify-between items-center">
-    <h1 class="text-lg font-bold">EXEQUATUR PERÚ</h1>
-    <nav class="space-x-4">
-      <a href="exequatur.html" class="hover:underline">Exequatur</a>
-      <a href="diagnostico.html" class="hover:underline">Diagnóstico</a>
-      <a href="evaluacion.html" class="hover:underline">Evaluación</a>
-      <a href="analisis.html" class="hover:underline">Análisis</a>
-    </nav>
-  </div>
+<body>
+<header class="header">
+  <h1>Análisis Profesional — EXEQUATUR PERÚ</h1>
+  <p>Servicio completo con verificación documental y registro final (USD 120)</p>
 </header>
 
-<!-- Diagrama paso 3 activo -->
-<div class="container mx-auto px-4 py-8">
-  <div class="flex items-center justify-center mb-8 md:space-x-6">
-    <div class="flex items-center space-x-3">
-      <div class="bg-blue-200 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">1</div>
-      <span>Diagnóstico</span>
-    </div>
-    <span class="mx-4 text-gray-400 hidden md:inline">➜</span>
-    <div class="flex items-center space-x-3">
-      <div class="bg-yellow-200 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">2</div>
-      <span>Evaluación</span>
-    </div>
-    <span class="mx-4 text-gray-400 hidden md:inline">➜</span>
-    <div class="flex items-center space-x-3">
-      <div class="bg-green-700 border-4 border-green-400 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold">3</div>
-      <span class="font-semibold text-green-700">Análisis</span>
-    </div>
+<div class="container">
+  <div class="card note">
+    <strong>ℹ Nota importante:</strong> Si no cuenta con el acta de matrimonio peruana, nuestro estudio puede obtenerla en Perú (RENIEC o Ministerio de Relaciones Exteriores) como parte del servicio.
   </div>
 
-  <main class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
-    <h2 class="text-2xl font-bold mb-4">Análisis Profesional — USD 50</h2>
-    <p class="mb-4 text-sm text-gray-700">Envía la sentencia extranjera y, si la tienes, el acta de matrimonio peruano. Nosotros accederemos a RENIEC/RREE cuando sea necesario.</p>
+  <div class="card">
+    <h2>Formulario — Envío de documentos</h2>
+    <form id="analysisForm" enctype="multipart/form-data" novalidate>
+      <label>Nombre completo</label>
+      <input type="text" name="nombre" required>
 
-    <form id="analisisForm" class="space-y-4" enctype="multipart/form-data" method="post">
-      <input type="text" name="nombre" placeholder="Nombre completo" class="w-full border p-2 rounded" required>
-      <input type="email" name="email" placeholder="Correo electrónico" class="w-full border p-2 rounded" required>
+      <label>Correo electrónico</label>
+      <input type="email" name="email" required>
 
-      <label class="block">
-        <span class="font-medium">Sube tu sentencia (PDF, JPG, PNG)</span>
-        <input type="file" name="sentencia" accept=".pdf,.jpg,.jpeg,.png" class="mt-2" required>
-      </label>
+      <label>Subir sentencia extranjera (PDF, JPG, PNG)</label>
+      <input type="file" name="sentencia" accept=".pdf,.jpg,.jpeg,.png" required>
 
-      <label class="block">
-        <span class="font-medium">Sube el acta de matrimonio peruano (si la tiene)</span>
-        <input type="file" name="acta" accept=".pdf,.jpg,.jpeg,.png" class="mt-2">
-      </label>
+      <label>Subir acta de matrimonio peruana (si la tiene)</label>
+      <input type="file" name="acta" accept=".pdf,.jpg,.jpeg,.png">
 
-      <textarea name="observaciones" placeholder="Comentarios adicionales" class="w-full border p-2 rounded"></textarea>
+      <input type="hidden" name="servicio" value="Análisis Profesional (USD 120)">
+
+      <div style="margin-top:14px">
+        <button type="submit" class="btn">Enviar documentación</button>
+        <a class="link-btn" href="#payments">Ir a opciones de pago</a>
+      </div>
     </form>
 
-    <div class="mt-6 grid md:grid-cols-3 gap-4">
-      <!-- PayPal / Tarjeta -->
-      <div class="border rounded p-4 shadow-sm text-center">
-        <h4 class="font-semibold mb-2">PayPal / Tarjeta</h4>
-        <p class="text-sm mb-3">Pago internacional y con tarjeta (Visa / Mastercard).</p>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="inline-block">
+    <div id="result" class="hidden"></div>
+  </div>
+
+  <div id="payments" class="card">
+    <h2>Opciones de pago (USD)</h2>
+    <p class="small">Selecciona la forma de pago que prefieras. Pago 100% seguro garantizado por EXEQUATUR PERÚ.</p>
+
+    <div class="pay-grid">
+      <!-- PayPal / Card -->
+      <div class="pay-card" style="border-top:4px solid #0070ba">
+        <i class="fab fa-paypal" style="font-size:32px;color:#0070ba"></i>
+        <h4>PayPal / Tarjeta</h4>
+        <p class="small">Pago internacional y con tarjeta (Visa / Mastercard). Redirige a PayPal.</p>
+        <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post">
           <input type="hidden" name="cmd" value="_xclick">
           <input type="hidden" name="business" value="exequaturperu@gmail.com">
-          <input type="hidden" name="item_name" value="Análisis Profesional">
-          <input type="hidden" name="amount" value="50.00">
+          <input type="hidden" name="item_name" value="Análisis Profesional - EXEQUATUR PERU">
+          <input type="hidden" name="amount" value="120.00">
           <input type="hidden" name="currency_code" value="USD">
-          <input type="submit" value="Pagar USD 50" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 cursor-pointer">
+          <input type="submit" value="Pagar USD 120" class="btn">
         </form>
+        <div class="small" style="margin-top:8px">Pago 100% seguro garantizado por EXEQUATUR PERÚ</div>
       </div>
 
       <!-- Yape -->
-      <div class="border rounded p-4 shadow-sm text-center">
-        <h4 class="font-semibold mb-2">Yape (Perú)</h4>
-        <p class="text-sm mb-3">Escanea el QR o transfiere al número.</p>
-        <img src="qr-991296777.png" alt="QR Yape 991296777" class="mx-auto mb-3 w-44 h-44 object-contain">
-        <div class="font-medium">Número: <span class="text-gray-700">991296777</span></div>
+      <div class="pay-card" style="border-top:4px solid #6f2dbd">
+        <i class="fas fa-qrcode" style="font-size:32px;color:#6f2dbd"></i>
+        <h4>Yape (Perú)</h4>
+        <p class="small">Escanea el QR o transfiere al número. Confirmar por WhatsApp.</p>
+        <img src="yape-991296777.png" alt="QR Yape" style="width:140px;height:140px;margin:8px auto;display:block;object-fit:contain">
+        <div class="small"><strong>Número:</strong> 991296777</div>
+        <div class="small" style="margin-top:8px">Pago 100% seguro garantizado por EXEQUATUR PERÚ</div>
       </div>
 
-      <!-- WhatsApp -->
-      <div class="border rounded p-4 shadow-sm text-center">
-        <h4 class="font-semibold mb-2">Confirmar por WhatsApp</h4>
-        <p class="text-sm mb-3">Coordina y envía el comprobante del pago.</p>
-        <a href="https://wa.me/51988521023?text=Hola%2C%20acabo%20de%20completar%20el%20formulario%20y%20deseo%20confirmar%20mi%20pago%20para%20el%20servicio%20de%20An%C3%A1lisis%20Profesional." target="_blank" class="inline-block bg-green-600 text-white px-4 py-2 rounded">Contactar y enviar comprobante</a>
+      <!-- BCP Transfer -->
+      <div class="pay-card" style="border-top:4px solid #ff8c00">
+        <i class="fas fa-university" style="font-size:32px;color:#ff8c00"></i>
+        <h4>Transferencia BCP (USD)</h4>
+        <p class="small">Cuenta corriente en dólares — enviar comprobante por WhatsApp o correo.</p>
+        <div class="small" style="text-align:left;margin-top:8px">
+          <strong>Banco:</strong> BCP<br>
+          <strong>Cuenta USD:</strong> 191-91612026-1-98<br>
+          <strong>CCI:</strong> 002-191-19161202619853<br>
+          <strong>Titular:</strong> Abog. Alex Pineda
+        </div>
+        <div class="small" style="margin-top:8px">Pago 100% seguro garantizado por EXEQUATUR PERÚ</div>
       </div>
     </div>
 
-    <p class="mt-4 text-xs text-gray-600">Si pagas por Yape, por favor envía el comprobante por WhatsApp para confirmar y agendar la revisión.</p>
-  </main>
+    <div style="text-align:center;margin-top:16px">
+      <a href="https://wa.me/51988521023?text=Hola%2C%20quisiera%20confirmar%20mi%20pago%20para%20el%20An%C3%A1lisis%20Profesional." target="_blank" class="btn" style="background:#25d366;color:white">Confirmar pago por WhatsApp</a>
+    </div>
+  </div>
+
+  <p class="small" style="text-align:center;margin-top:8px">Después de realizar la transferencia por Yape o BCP, envía el comprobante por WhatsApp para confirmar y agendar la revisión.</p>
 </div>
 
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/51988521023?text=Hola%2C%20deseo%20coordinar%20mi%20An%C3%A1lisis%20Profesional." class="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg" target="_blank">📱</a>
+<a class="whatsapp-float" href="https://wa.me/51988521023" target="_blank"><i class="fab fa-whatsapp" style="font-size:26px"></i></a>
 
-<footer class="bg-gray-100 text-center py-4 mt-8">
-  &copy; 2025 EXEQUATUR PERÚ
-</footer>
+<script>
+const form = document.getElementById('analysisForm');
+const resultBox = document.getElementById('result');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  resultBox.className = '';
+  resultBox.innerHTML = '<div class="small">Enviando, por favor espere...</div>';
+  const data = new FormData(form);
+  try {
+    const resp = await fetch('/enviar.php', { method: 'POST', body: data });
+    const json = await resp.json();
+    if (json.success) {
+      resultBox.className = 'success';
+      resultBox.innerHTML = '<strong>✅ Gracias — Hemos recibido su documentación.</strong><br>Nos comunicaremos a la brevedad.<br><a class="btn" href="#payments" style="margin-top:10px">Ir a opciones de pago</a> <a class="btn" href="https://wa.me/51988521023?text=Hola%2C%20acabo%20de%20enviar%20mis%20documentos%20para%20An%C3%A1lisis." style="background:#25d366;color:#fff" target="_blank">Contactar por WhatsApp</a>';
+      form.reset();
+      window.scrollTo({ top: resultBox.offsetTop - 20, behavior: 'smooth' });
+    } else {
+      resultBox.className = 'error';
+      resultBox.innerHTML = '<strong>❌ Ocurrió un error:</strong> ' + (json.error || 'Inténtalo de nuevo');
+    }
+  } catch (err) {
+    resultBox.className = 'error';
+    resultBox.innerHTML = '<strong>❌ Error de conexión.</strong> Inténtalo nuevamente o escríbenos por WhatsApp.';
+  }
+});
+</script>
 </body>
 </html>
