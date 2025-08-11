@@ -8,11 +8,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: Arial, sans-serif; margin: 0; line-height: 1.6; background: #f9f9f9; }
-        header { background: #002b5c; color: #fff; padding: 40px 20px; text-align: center; }
+        header { background: #002b5c; color: #fff; padding: 60px 20px 40px; text-align: center; }
         header h1 { margin: 0; font-size: 2.5em; }
         header p { font-size: 1.2em; margin-top: 10px; }
 
-        .container { max-width: 1100px; margin: auto; padding: 20px; }
+        /* Barra de contacto fija y animada */
+        .contact-bar {
+            background: #ffc107;
+            color: #002b5c;
+            padding: 10px 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            font-size: 1em;
+            transition: transform 0.3s ease-in-out;
+        }
+        .contact-bar a {
+            color: #002b5c;
+            text-decoration: none;
+        }
+        .contact-bar i {
+            margin-right: 6px;
+        }
+        .contact-bar a:hover {
+            text-decoration: underline;
+        }
+        .contact-bar.hide {
+            transform: translateY(-100%);
+        }
+
+        .container { max-width: 1100px; margin: auto; padding: 20px; margin-top: 60px; }
 
         /* Beneficios */
         .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin: 40px 0; }
@@ -26,11 +58,11 @@
         .transparency ul { list-style: none; padding-left: 0; }
         .transparency ul li::before { content: "✔"; color: green; margin-right: 8px; }
 
-        /* Diagrama de pasos */
-        .steps { display: flex; justify-content: space-between; flex-wrap: wrap; margin: 40px 0; }
-        .step { flex: 1; min-width: 220px; background: white; padding: 20px; margin: 10px; border-radius: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        /* Paso único */
+        .steps { display: flex; justify-content: center; flex-wrap: wrap; margin: 40px 0; }
+        .step { flex: 1; min-width: 250px; max-width: 400px; background: white; padding: 20px; margin: 10px; border-radius: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         .step h3 { color: #002b5c; }
-        .step a { display: inline-block; margin-top: 10px; padding: 8px 15px; background: #002b5c; color: white; border-radius: 5px; text-decoration: none; }
+        .step a { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #002b5c; color: white; border-radius: 5px; text-decoration: none; font-weight: bold; }
         .step a:hover { background: #004080; }
 
         /* CTA */
@@ -54,15 +86,21 @@
 </head>
 <body>
 
+<!-- Barra de contacto -->
+<div class="contact-bar" id="contactBar">
+    <a href="https://wa.me/51988521023" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp: +51 988 521 023</a>
+    <a href="tel:+51988521023"><i class="fas fa-phone"></i> Llamar: +51 988 521 023</a>
+</div>
+
 <header>
     <h1>Exequátur de Divorcio</h1>
-    <p>Validación de sentencias extranjeras de divorcio en Perú para peruanos en el exterior</p>
+    <p>Seguridad, claridad y respaldo legal para peruanos en el extranjero</p>
 </header>
 
 <div class="container">
     <section>
-        <p>En <strong>EXEQUATUR PERÚ</strong> nos especializamos en el reconocimiento legal de sentencias extranjeras de divorcio ante el Poder Judicial del Perú. Este proceso, conocido como <em>exequátur</em>, permite que tu divorcio emitido en otro país tenga plena validez en territorio peruano.</p>
-        <p>Si eres peruano residente en el extranjero, este trámite es esencial para actualizar tu estado civil en el Registro Civil, RENIEC o municipalidad correspondiente.</p>
+        <p>En <strong>EXEQUATUR PERÚ</strong> nos especializamos en el reconocimiento legal de sentencias extranjeras de divorcio ante el Poder Judicial del Perú. Nuestro compromiso es que tomes decisiones seguras y con la información correcta, con el acompañamiento directo de abogados especialistas en este proceso.</p>
+        <p>Si eres peruano residente en el extranjero, este trámite es esencial para actualizar tu estado civil en el Registro Civil, RENIEC o municipalidad correspondiente, y evitar futuros inconvenientes legales.</p>
     </section>
 
     <section class="benefits">
@@ -84,7 +122,7 @@
         <div class="benefit">
             <i class="fas fa-handshake"></i>
             <h3>Atención Personalizada</h3>
-            <p>Te acompañamos de principio a fin, estés donde estés.</p>
+            <p>Contacto directo con nuestros abogados por WhatsApp o teléfono en todo momento.</p>
         </div>
     </section>
 
@@ -101,19 +139,9 @@
 
     <section class="steps">
         <div class="step">
-            <h3>Paso 1: Diagnóstico</h3>
-            <p>Responde 4 preguntas esenciales para confirmar la viabilidad.</p>
-            <a href="diagnostico.html">Iniciar</a>
-        </div>
-        <div class="step">
-            <h3>Paso 2: Evaluación</h3>
-            <p>Envíanos tu sentencia para revisión detallada.</p>
-            <a href="evaluacion.html">Iniciar</a>
-        </div>
-        <div class="step">
-            <h3>Paso 3: Análisis</h3>
-            <p>Análisis profundo con acta de matrimonio y sentencia.</p>
-            <a href="analisis.html">Iniciar</a>
+            <h3>Primer Paso: Diagnóstico</h3>
+            <p>Responde 4 preguntas esenciales para que podamos confirmar la viabilidad de tu proceso y orientarte con seguridad.</p>
+            <a href="diagnostico.html">Realizar Diagnóstico Gratuito</a>
         </div>
     </section>
 
@@ -125,6 +153,23 @@
 <a href="https://wa.me/51988521023" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
+
+<script>
+    let lastScrollTop = 0;
+    const contactBar = document.getElementById("contactBar");
+
+    window.addEventListener("scroll", function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            // Scroll hacia abajo → ocultar barra
+            contactBar.classList.add("hide");
+        } else {
+            // Scroll hacia arriba → mostrar barra
+            contactBar.classList.remove("hide");
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }, false);
+</script>
 
 </body>
 </html>
