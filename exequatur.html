@@ -6,113 +6,115 @@
 <title>Exequátur de Divorcio - EXEQUATUR PERÚ</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; line-height:1.6; }
-header { background: #002b5c; color: white; text-align: center; padding: 30px 20px; }
-header h1 { margin: 0; font-size: 1.8em; }
-.container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 30px; }
+/* Tipografía y colores */
+body { font-family: 'Lato', Arial, sans-serif; margin: 0; background: #f9f9f9; color:#333; line-height:1.6;}
+header { background: #002b5c; color: white; text-align: center; padding: 40px 20px; }
+header h1 { margin: 0; font-size: 2em; }
+header p { font-size: 1.1em; margin-top:10px; }
+/* Container */
+.container { max-width: 850px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-top: 30px; }
+/* Introducción */
 .intro { background:#f0f4f8; padding:30px; border-radius:10px; margin-bottom:30px; }
-.intro h2 { color:#002b5c; }
-.intro p { margin-bottom: 15px; }
-.alerta { background: #c0392b; color: white; padding: 12px 18px; border-radius: 6px; font-weight: bold; margin-bottom: 20px; font-size: 1.1em; text-align: center; }
-.question { margin-bottom: 20px; }
-label { display: block; font-weight: bold; margin-bottom: 8px; }
-select, input[type="file"] { width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
-.btn { display: inline-block; padding: 12px 20px; background: #ffc107; color: #002b5c; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px; cursor: pointer; border: none; }
-.btn:hover { background: #e0a800; }
-.payment-section { text-align: center; margin: 20px 0; }
-.contact-options { margin-top: 20px; text-align: center; }
-.contact-btn { display: inline-block; padding: 12px 18px; margin: 5px; border-radius: 8px; font-weight: bold; text-decoration: none; color: white; }
-.whatsapp { background: #25D366; }
-.whatsapp:hover { background: #1ebe5d; }
-.phone { background: #002b5c; }
-.phone:hover { background: #001a3a; }
-#document-upload { display: none; margin-top: 30px; }
+.intro h2 { color:#002b5c; font-size:1.6em; margin-bottom:15px; }
+.intro p { margin-bottom:15px; }
+/* Franja de urgencia */
+.alerta { background: #c0392b; color: white; padding: 15px 20px; border-radius: 6px; font-weight: bold; margin-bottom: 30px; font-size: 1.1em; text-align: center; }
+/* Beneficios */
+.benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:20px; margin-bottom:30px; }
+.benefit { background:white; padding:20px; border-radius:10px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;}
+.benefit:hover { transform: translateY(-5px);}
+.benefit i { font-size:40px; color:#ffc107; margin-bottom:10px; }
+.benefit h3 { margin-bottom:10px; color:#002b5c; }
+/* Formulario */
+form { margin-top:20px; }
+.question { margin-bottom:20px; }
+label { display:block; font-weight:bold; margin-bottom:8px; }
+select, input[type="file"], input[type="text"], input[type="number"] { width:100%; padding:10px; border-radius:5px; border:1px solid #ccc; }
+/* Botones */
+.btn { display:inline-block; padding:12px 25px; background:#ffc107; color:#002b5c; text-decoration:none; font-weight:bold; border-radius:8px; margin-top:10px; cursor:pointer; border:none; transition: background 0.3s; }
+.btn:hover { background:#e0a800; }
+/* Pago y documentos */
+.payment-section { text-align:center; margin:25px 0; }
+.manual-payment { background:#f0f0f0; padding:15px; border-radius:8px; margin-top:20px; text-align:left;}
+#document-upload { display:none; margin-top:30px; }
+/* Contacto */
+.contact-options { margin-top:30px; text-align:center; }
+.contact-btn { display:inline-block; padding:12px 18px; margin:5px; border-radius:8px; font-weight:bold; text-decoration:none; color:white; transition: 0.3s;}
+.whatsapp { background:#25D366; }
+.whatsapp:hover { background:#1ebe5d; }
+.phone { background:#002b5c; }
+.phone:hover { background:#001a3a; }
+/* Animaciones suaves */
+.fade-in { opacity:0; animation: fadeIn 1s forwards; }
+@keyframes fadeIn { to { opacity:1; } }
 </style>
 </head>
 <body>
 
-<header>
-<h1>Exequátur de Divorcio - Diagnóstico Premium</h1>
-<p>Asesoría especializada para peruanos en el extranjero</p>
+<header class="fade-in">
+<h1>Exequátur de Divorcio – Diagnóstico Premium</h1>
+<p>Valida tu divorcio extranjero en Perú con abogados especializados</p>
 </header>
 
-<div class="container">
+<div class="container fade-in">
 
-<!-- Introducción al Exequátur -->
+<!-- Introducción -->
 <section class="intro">
 <h2>¿Qué es el Exequátur de Divorcio?</h2>
-<p>El exequátur es el procedimiento mediante el cual una sentencia de divorcio emitida en el extranjero obtiene <strong>plena validez legal en Perú</strong>. Este trámite es fundamental para actualizar tu estado civil en RENIEC o en la municipalidad correspondiente.</p>
-<p>Se trata de un proceso judicial que <strong>requiere el análisis y representación de abogados especializados</strong>, para garantizar que tu divorcio sea reconocido correctamente y sin contratiempos legales.</p>
-<p>En <strong>EXEQUATUR PERÚ</strong> contamos con amplia experiencia en la gestión de sentencias extranjeras, asegurando un proceso seguro y eficiente.</p>
+<p>El exequátur permite que una sentencia de divorcio emitida en otro país tenga plena validez legal en Perú. Es un proceso judicial que requiere <strong>asesoría de abogados especializados</strong> para asegurar el reconocimiento correcto y seguro de tu divorcio.</p>
+<p>En <strong>EXEQUATUR PERÚ</strong> contamos con amplia experiencia, garantizando rapidez, seguridad y transparencia en cada caso.</p>
 </section>
 
 <!-- Alerta de urgencia -->
-<div class="alerta">
+<div class="alerta fade-in">
 <i class="fas fa-exclamation-triangle"></i> Su caso requiere atención especializada inmediata
 </div>
 
+<!-- Beneficios -->
+<section class="benefits fade-in">
+<div class="benefit"><i class="fas fa-balance-scale"></i><h3>Confianza y Experiencia</h3><p>Más de 10 años asesorando peruanos en el extranjero en procesos de exequátur.</p></div>
+<div class="benefit"><i class="fas fa-clock"></i><h3>Rapidez en el Proceso</h3><p>Optimizamos cada etapa para resolver su trámite en el menor tiempo posible.</p></div>
+<div class="benefit"><i class="fas fa-file-invoice-dollar"></i><h3>Transparencia de Costos</h3><p>Informe técnico definitivo con valor claro y sin sorpresas.</p></div>
+<div class="benefit"><i class="fas fa-handshake"></i><h3>Atención Personalizada</h3><p>Le acompañamos de principio a fin, estés donde estés.</p></div>
+</section>
+
 <!-- Formulario de Diagnóstico Premium -->
 <form id="diagnosticoForm">
-    <div class="question">
-        <label>1. ¿La sentencia es firme (no hubo apelación)?</label>
-        <select name="p1" required>
-            <option value="">Seleccione...</option>
-            <option value="sí">Sí</option>
-            <option value="no">No</option>
-        </select>
-    </div>
-    <div class="question">
-        <label>2. ¿La sentencia está debidamente apostillada (Convenio de La Haya)?</label>
-        <select name="p2" required>
-            <option value="">Seleccione...</option>
-            <option value="sí">Sí</option>
-            <option value="no">No</option>
-        </select>
-    </div>
-    <div class="question">
-        <label>3. ¿El ex cónyuge fue debidamente notificado del proceso de divorcio?</label>
-        <select name="p3" required>
-            <option value="">Seleccione...</option>
-            <option value="sí">Sí</option>
-            <option value="no">No</option>
-        </select>
-    </div>
-    <div class="question">
-        <label>4. ¿El matrimonio se celebró en Perú o se inscribió en un consulado peruano?</label>
-        <select name="p4" required>
-            <option value="">Seleccione...</option>
-            <option value="sí">Sí</option>
-            <option value="no">No</option>
-        </select>
-    </div>
+<div class="question"><label>1. ¿La sentencia es firme (no hubo apelación)?</label><select name="p1" required><option value="">Seleccione...</option><option value="sí">Sí</option><option value="no">No</option></select></div>
+<div class="question"><label>2. ¿La sentencia está debidamente apostillada (Convenio de La Haya)?</label><select name="p2" required><option value="">Seleccione...</option><option value="sí">Sí</option><option value="no">No</option></select></div>
+<div class="question"><label>3. ¿El ex cónyuge fue debidamente notificado del proceso de divorcio?</label><select name="p3" required><option value="">Seleccione...</option><option value="sí">Sí</option><option value="no">No</option></select></div>
+<div class="question"><label>4. ¿El matrimonio se celebró en Perú o se inscribió en un consulado peruano?</label><select name="p4" required><option value="">Seleccione...</option><option value="sí">Sí</option><option value="no">No</option></select></div>
 
-    <!-- Sección de pago -->
-    <div class="payment-section">
-        <p><strong>Costo del Informe Técnico Definitivo:</strong> 100 USD</p>
-        <p>Este pago garantiza que nuestros abogados especializados analizarán su documentación y emitirán un informe profesional y definitivo.</p>
-        <div id="paypal-button-container"></div>
-    </div>
+<!-- Pago previo -->
+<div class="payment-section fade-in">
+<p><strong>Costo del Informe Técnico Definitivo:</strong> 100 USD</p>
+<p>Este pago garantiza que nuestros abogados analizarán su documentación y emitirán un informe profesional y definitivo.</p>
+<div id="paypal-button-container"></div>
+
+<div class="manual-payment">
+<p>Opciones de pago manual:</p>
+<ul>
+<li>Yape / Plin: 991296777 (Alex Pineda)</li>
+<li>Transferencia bancaria: BCP, Cuenta: 123-4567890-0-12</li>
+<li>Después de realizar el pago, suba sus documentos y envíe comprobante por WhatsApp.</li>
+</ul>
+</div>
+</div>
 </form>
 
-<!-- Subida de documentos después del pago -->
-<div id="document-upload" class="container">
+<!-- Subida de documentos -->
+<div id="document-upload" class="container fade-in">
 <h3>Suba sus documentos</h3>
-<p>Después de confirmar el pago, suba su sentencia y acta de matrimonio:</p>
+<p>Después de confirmar el pago, suba su sentencia y acta de matrimonio (si no dispone, nuestro estudio la gestionará; análisis técnico en 48 horas).</p>
 <form id="docsForm" action="enviar-documentos.php" method="POST" enctype="multipart/form-data">
-    <div class="question">
-        <label>Sentencia de divorcio (PDF o imagen)</label>
-        <input type="file" name="sentencia" required>
-    </div>
-    <div class="question">
-        <label>Acta de matrimonio peruano o consular (opcional, si no la tiene, nuestro estudio la gestionará)</label>
-        <input type="file" name="acta">
-    </div>
-    <button type="submit" class="btn">Enviar Documentos para Informe Técnico</button>
+<div class="question"><label>Sentencia de divorcio (PDF o imagen)</label><input type="file" name="sentencia" required></div>
+<div class="question"><label>Acta de matrimonio peruano o consular (opcional)</label><input type="file" name="acta"></div>
+<button type="submit" class="btn">Enviar Documentos para Informe Técnico</button>
 </form>
 </div>
 
 <!-- Contacto directo -->
-<div class="contact-options">
+<div class="contact-options fade-in">
 <a href="https://wa.me/51991296777" target="_blank" class="contact-btn whatsapp"><i class="fab fa-whatsapp"></i> Ponte en contacto con un abogado experto</a>
 <a href="tel:+51988521023" class="contact-btn phone"><i class="fas fa-phone"></i> Abogado en línea por teléfono</a>
 </div>
