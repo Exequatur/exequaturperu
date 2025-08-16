@@ -1,112 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exequátur de Divorcio - EXEQUATUR PERÚ</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin:0; padding:0; background:#f8f9fa; color:#333; }
-    header { background:#002855; color:#fff; padding:2rem; text-align:center; }
-    header h1 { margin:0; font-size:2rem; }
-    .container { max-width:1000px; margin:auto; padding:2rem; }
-    h2 { color:#002855; margin-top:1.5rem; }
-    .btn { display:inline-block; background:#ffc107; color:#000; padding:0.7rem 1.2rem; text-decoration:none; border-radius:5px; margin-top:1rem; font-weight:bold; }
-    .btn:hover { background:#e0a800; }
-    form { background:#fff; padding:2rem; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); margin-top:2rem; }
-    form label { display:block; margin:1rem 0 0.3rem; font-weight:bold; }
-    form input, form select, form textarea { width:100%; padding:0.6rem; border:1px solid #ccc; border-radius:5px; }
-    .form-section { margin-bottom:2rem; }
-    .success-message { display:none; background:#d4edda; color:#155724; padding:1rem; border-radius:5px; margin-top:1rem; }
-    footer { background:#002855; color:#fff; text-align:center; padding:1rem; margin-top:2rem; }
-    .contact-options { margin-top:2rem; }
-    .contact-options a { display:inline-block; margin:0.5rem; padding:0.7rem 1.2rem; border-radius:8px; font-weight:bold; text-decoration:none; }
-    .yape { background:#6f42c1; color:#fff; }
-    .paypal { background:#0070ba; color:#fff; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exequátur de Divorcio - EXEQUATUR PERÚ</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Exequátur de Divorcio en el Perú</h1>
-    <p>Valida tu sentencia extranjera con el respaldo de abogados especialistas</p>
-  </header>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">EXEQUATUR PERÚ</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="exequatur.html" class="active">Exequátur</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <div class="container">
-    <h2>¿Qué es el exequátur?</h2>
-    <p>El exequátur es el procedimiento judicial mediante el cual una sentencia extranjera adquiere validez en el Perú. 
-    Es un proceso indispensable si te divorciaste fuera del país y deseas regularizar tu estado civil en territorio peruano.</p>
+    <!-- Sección principal -->
+    <section class="hero">
+        <div class="container">
+            <h2>Exequátur de Divorcio en el Perú</h2>
+            <p>
+                El <strong>exequátur</strong> es el proceso judicial mediante el cual una sentencia extranjera, como el divorcio, 
+                es reconocida y validada en el Perú. Este procedimiento es indispensable para regularizar el estado civil de 
+                los peruanos en el extranjero y evitar futuros problemas legales en materia de matrimonio, herencias o sucesiones.
+            </p>
+            <p>
+                En <strong>EXEQUATUR PERÚ</strong> contamos con abogados especialistas en derecho internacional privado que 
+                gestionarán su proceso con rapidez, seguridad y eficacia.
+            </p>
+            <a href="#formulario" class="btn-primary">Realizar diagnóstico gratuito</a>
+        </div>
+    </section>
 
-    <h2>Diagnóstico inicial gratuito</h2>
-    <p>Responde las siguientes preguntas y adjunta tu sentencia y acta de matrimonio. Te enviaremos un análisis legal a tu correo.</p>
+    <!-- Formulario de diagnóstico -->
+    <section class="form-section" id="formulario">
+        <div class="container">
+            <h3>Diagnóstico de Viabilidad</h3>
+            <p>Complete este breve cuestionario y un abogado experto revisará la viabilidad de su sentencia de divorcio.</p>
+            
+            <form id="diagnosticoForm">
+                <label><input type="checkbox" name="firmeza"> La sentencia es firme (no hubo apelación).</label><br>
+                <label><input type="checkbox" name="apostilla"> La sentencia está apostillada (Convenio de La Haya).</label><br>
+                <label><input type="checkbox" name="notificacion"> El ex cónyuge fue notificado debidamente en el proceso.</label><br>
+                <label><input type="checkbox" name="matrimonio"> El matrimonio fue celebrado en Perú o inscrito en un consulado peruano.</label><br>
+                
+                <label for="sentencia">Adjuntar copia de la sentencia:</label>
+                <input type="file" id="sentencia" name="sentencia" accept=".pdf,.jpg,.png"><br>
+                
+                <label for="acta">Adjuntar acta de matrimonio:</label>
+                <input type="file" id="acta" name="acta" accept=".pdf,.jpg,.png"><br>
+                
+                <button type="submit" class="btn-primary">Enviar diagnóstico</button>
+            </form>
 
-    <form id="exequaturForm">
-      <div class="form-section">
-        <label>1. ¿La sentencia es firme (no hubo apelación)?</label>
-        <select name="sentencia_firme" required>
-          <option value="">Seleccione...</option>
-          <option value="sí">Sí</option>
-          <option value="no">No</option>
-        </select>
+            <div id="respuestaAuto" class="hidden">
+                <h4>Gracias por su envío</h4>
+                <p>Hemos recibido su información. Un abogado especialista lo contactará en breve para evaluar su caso.</p>
+                <p><strong>Contacto inmediato:</strong></p>
+                <ul>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/51991296777" target="_blank">WhatsApp Abogado en Línea</a></li>
+                    <li><i class="fas fa-phone"></i> Tel: +51 991296777</li>
+                    <li><i class="fas fa-envelope"></i> contacto@exequatur.pe</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        <label>2. ¿La sentencia está apostillada (Convenio de La Haya)?</label>
-        <select name="apostilla" required>
-          <option value="">Seleccione...</option>
-          <option value="sí">Sí</option>
-          <option value="no">No</option>
-        </select>
+    <!-- Tarifas -->
+    <section class="pricing">
+        <div class="container">
+            <h3>Tarifas y Modalidades de Pago</h3>
+            <p>El costo del proceso dependerá de la complejidad de su caso. Para facilitar el inicio de la gestión, 
+            ofrecemos modalidades seguras de pago:</p>
 
-        <label>3. ¿El ex cónyuge fue debidamente notificado del proceso?</label>
-        <select name="notificacion" required>
-          <option value="">Seleccione...</option>
-          <option value="sí">Sí</option>
-          <option value="no">No</option>
-        </select>
+            <ul>
+                <li><i class="fas fa-money-bill-wave"></i> Yape: <strong>991296777</strong></li>
+                <li><i class="fab fa-paypal"></i> PayPal: <a href="https://paypal.me/exequaturperu" target="_blank">Ir a PayPal</a></li>
+                <li><i class="fas fa-university"></i> Transferencia bancaria (consultar datos)</li>
+            </ul>
+        </div>
+    </section>
 
-        <label>4. ¿El matrimonio fue celebrado en Perú o inscrito en un consulado peruano?</label>
-        <select name="matrimonio_peru" required>
-          <option value="">Seleccione...</option>
-          <option value="sí">Sí</option>
-          <option value="no">No</option>
-        </select>
+    <!-- Llamado a la acción -->
+    <section class="cta">
+        <div class="container">
+            <h3>¿Necesita validar su divorcio en el Perú?</h3>
+            <a href="https://wa.me/51991296777" class="btn-primary">Póngase en contacto con un abogado experto</a>
+        </div>
+    </section>
 
-        <label>Adjuntar sentencia de divorcio (PDF o imagen)</label>
-        <input type="file" name="sentencia" accept=".pdf,.jpg,.jpeg,.png" required>
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <p>© 2025 EXEQUATUR PERÚ - Todos los derechos reservados</p>
+        </div>
+    </footer>
 
-        <label>Adjuntar acta de matrimonio (PDF o imagen)</label>
-        <input type="file" name="acta" accept=".pdf,.jpg,.jpeg,.png" required>
-
-        <label>Correo electrónico de contacto</label>
-        <input type="email" name="email" required>
-      </div>
-
-      <button type="submit" class="btn">Enviar diagnóstico</button>
-      <div class="success-message" id="successMessage">
-        ✅ Gracias. Hemos recibido tus documentos.  
-        Nuestro equipo legal revisará tu caso y te contactaremos en breve.
-      </div>
-    </form>
-
-    <div class="contact-options">
-      <h2>Opciones de pago</h2>
-      <p>Si deseas una revisión prioritaria de tus documentos:</p>
-      <a href="https://wa.me/51991296777?text=Hola%20quiero%20pagar%20por%20Yape%20para%20la%20revisión%20del%20exequátur" class="yape">Pagar con Yape (991296777)</a>
-      <a href="https://www.paypal.com/paypalme/exequaturperu" class="paypal">Pagar con PayPal</a>
-    </div>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 EXEQUATUR PERÚ - Abogados Especialistas en Derecho Internacional Privado</p>
-    <p>Contacto: exequaturperu@gmail.com | WhatsApp: +51 991296777</p>
-  </footer>
-
-  <script>
-    document.getElementById("exequaturForm").addEventListener("submit", function(event){
-      event.preventDefault();
-      document.getElementById("successMessage").style.display = "block";
-      // Aquí deberíamos integrar backend para enviar correo con los archivos
-      // Ejemplo: EmailJS, Node.js o PHP con envío a exequaturperu@gmail.com
-    });
-  </script>
+    <script>
+        document.getElementById("diagnosticoForm").addEventListener("submit", function(e){
+            e.preventDefault();
+            document.getElementById("respuestaAuto").classList.remove("hidden");
+        });
+    </script>
 </body>
 </html>
