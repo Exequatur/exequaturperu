@@ -3,102 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diagnóstico Premium - Exequátur de Divorcio</title>
+<title>Exequátur de Divorcio - EXEQUATUR PERÚ</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
-    header { background: #002b5c; color: white; text-align: center; padding: 30px 20px; }
-    header h1 { margin: 0; font-size: 1.8em; }
-    .container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 30px; }
-    .question { margin-bottom: 20px; }
-    label { display: block; font-weight: bold; margin-bottom: 8px; }
-    select, input[type="file"] { width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
-    .btn { display: inline-block; padding: 12px 20px; background: #ffc107; color: #002b5c; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px; cursor: pointer; border: none; }
-    .btn:hover { background: #e0a800; }
-    .alerta { background: #c0392b; color: white; padding: 12px 18px; border-radius: 6px; font-weight: bold; margin-bottom: 20px; font-size: 1.1em; text-align: center; }
-    .payment-section { text-align: center; margin: 20px 0; }
-    .contact-options { margin-top: 20px; text-align: center; }
-    .contact-btn { display: inline-block; padding: 12px 18px; margin: 5px; border-radius: 8px; font-weight: bold; text-decoration: none; color: white; }
-    .whatsapp { background: #25D366; }
-    .whatsapp:hover { background: #1ebe5d; }
-    .phone { background: #002b5c; }
-    .phone:hover { background: #001a3a; }
-    #document-upload { display: none; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; line-height:1.6; }
+header { background: #002b5c; color: white; text-align: center; padding: 30px 20px; }
+header h1 { margin: 0; font-size: 1.8em; }
+.container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 30px; }
+.intro { background:#f0f4f8; padding:30px; border-radius:10px; margin-bottom:30px; }
+.intro h2 { color:#002b5c; }
+.intro p { margin-bottom: 15px; }
+.alerta { background: #c0392b; color: white; padding: 12px 18px; border-radius: 6px; font-weight: bold; margin-bottom: 20px; font-size: 1.1em; text-align: center; }
+.question { margin-bottom: 20px; }
+label { display: block; font-weight: bold; margin-bottom: 8px; }
+select, input[type="file"] { width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+.btn { display: inline-block; padding: 12px 20px; background: #ffc107; color: #002b5c; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px; cursor: pointer; border: none; }
+.btn:hover { background: #e0a800; }
+.payment-section { text-align: center; margin: 20px 0; }
+.contact-options { margin-top: 20px; text-align: center; }
+.contact-btn { display: inline-block; padding: 12px 18px; margin: 5px; border-radius: 8px; font-weight: bold; text-decoration: none; color: white; }
+.whatsapp { background: #25D366; }
+.whatsapp:hover { background: #1ebe5d; }
+.phone { background: #002b5c; }
+.phone:hover { background: #001a3a; }
+#document-upload { display: none; margin-top: 30px; }
 </style>
 </head>
 <body>
 
 <header>
-    <h1>Diagnóstico Premium de Exequátur</h1>
-    <p>Confirme la viabilidad de su exequátur de divorcio con análisis profesional</p>
+<h1>Exequátur de Divorcio - Diagnóstico Premium</h1>
+<p>Asesoría especializada para peruanos en el extranjero</p>
 </header>
 
 <div class="container">
-    <div class="alerta">
-        <i class="fas fa-exclamation-triangle"></i> Su caso requiere atención especializada
-    </div>
 
-    <form id="diagnosticoForm">
-        <div class="question">
-            <label>1. ¿La sentencia es firme (no hubo apelación)?</label>
-            <select name="p1" required>
-                <option value="">Seleccione...</option>
-                <option value="sí">Sí</option>
-                <option value="no">No</option>
-            </select>
-        </div>
-        <div class="question">
-            <label>2. ¿La sentencia está debidamente apostillada (Convenio de La Haya)?</label>
-            <select name="p2" required>
-                <option value="">Seleccione...</option>
-                <option value="sí">Sí</option>
-                <option value="no">No</option>
-            </select>
-        </div>
-        <div class="question">
-            <label>3. ¿El ex cónyuge fue debidamente notificado del proceso de divorcio?</label>
-            <select name="p3" required>
-                <option value="">Seleccione...</option>
-                <option value="sí">Sí</option>
-                <option value="no">No</option>
-            </select>
-        </div>
-        <div class="question">
-            <label>4. ¿El matrimonio se celebró en Perú o se inscribió en un consulado peruano?</label>
-            <select name="p4" required>
-                <option value="">Seleccione...</option>
-                <option value="sí">Sí</option>
-                <option value="no">No</option>
-            </select>
-        </div>
+<!-- Introducción al Exequátur -->
+<section class="intro">
+<h2>¿Qué es el Exequátur de Divorcio?</h2>
+<p>El exequátur es el procedimiento mediante el cual una sentencia de divorcio emitida en el extranjero obtiene <strong>plena validez legal en Perú</strong>. Este trámite es fundamental para actualizar tu estado civil en RENIEC o en la municipalidad correspondiente.</p>
+<p>Se trata de un proceso judicial que <strong>requiere el análisis y representación de abogados especializados</strong>, para garantizar que tu divorcio sea reconocido correctamente y sin contratiempos legales.</p>
+<p>En <strong>EXEQUATUR PERÚ</strong> contamos con amplia experiencia en la gestión de sentencias extranjeras, asegurando un proceso seguro y eficiente.</p>
+</section>
 
-        <div class="payment-section">
-            <p><strong>Costo del Informe Técnico Definitivo:</strong> 100 USD</p>
-            <p>Este pago garantiza que nuestros abogados especializados analizarán su documentación y emitirán un informe profesional y definitivo.</p>
-            <div id="paypal-button-container"></div>
-        </div>
-    </form>
-
-    <div id="document-upload" class="container">
-        <h3>Suba sus documentos</h3>
-        <p>Después de confirmar el pago, suba su sentencia y acta de matrimonio:</p>
-        <form id="docsForm">
-            <div class="question">
-                <label>Sentencia de divorcio (PDF o imagen)</label>
-                <input type="file" name="sentencia" required>
-            </div>
-            <div class="question">
-                <label>Acta de matrimonio peruano o consular (si no la tiene, nuestro estudio la gestionará)</label>
-                <input type="file" name="acta">
-            </div>
-            <button type="submit" class="btn">Enviar Documentos para Informe Técnico</button>
-        </form>
-    </div>
+<!-- Alerta de urgencia -->
+<div class="alerta">
+<i class="fas fa-exclamation-triangle"></i> Su caso requiere atención especializada inmediata
 </div>
 
+<!-- Formulario de Diagnóstico Premium -->
+<form id="diagnosticoForm">
+    <div class="question">
+        <label>1. ¿La sentencia es firme (no hubo apelación)?</label>
+        <select name="p1" required>
+            <option value="">Seleccione...</option>
+            <option value="sí">Sí</option>
+            <option value="no">No</option>
+        </select>
+    </div>
+    <div class="question">
+        <label>2. ¿La sentencia está debidamente apostillada (Convenio de La Haya)?</label>
+        <select name="p2" required>
+            <option value="">Seleccione...</option>
+            <option value="sí">Sí</option>
+            <option value="no">No</option>
+        </select>
+    </div>
+    <div class="question">
+        <label>3. ¿El ex cónyuge fue debidamente notificado del proceso de divorcio?</label>
+        <select name="p3" required>
+            <option value="">Seleccione...</option>
+            <option value="sí">Sí</option>
+            <option value="no">No</option>
+        </select>
+    </div>
+    <div class="question">
+        <label>4. ¿El matrimonio se celebró en Perú o se inscribió en un consulado peruano?</label>
+        <select name="p4" required>
+            <option value="">Seleccione...</option>
+            <option value="sí">Sí</option>
+            <option value="no">No</option>
+        </select>
+    </div>
+
+    <!-- Sección de pago -->
+    <div class="payment-section">
+        <p><strong>Costo del Informe Técnico Definitivo:</strong> 100 USD</p>
+        <p>Este pago garantiza que nuestros abogados especializados analizarán su documentación y emitirán un informe profesional y definitivo.</p>
+        <div id="paypal-button-container"></div>
+    </div>
+</form>
+
+<!-- Subida de documentos después del pago -->
+<div id="document-upload" class="container">
+<h3>Suba sus documentos</h3>
+<p>Después de confirmar el pago, suba su sentencia y acta de matrimonio:</p>
+<form id="docsForm" action="enviar-documentos.php" method="POST" enctype="multipart/form-data">
+    <div class="question">
+        <label>Sentencia de divorcio (PDF o imagen)</label>
+        <input type="file" name="sentencia" required>
+    </div>
+    <div class="question">
+        <label>Acta de matrimonio peruano o consular (opcional, si no la tiene, nuestro estudio la gestionará)</label>
+        <input type="file" name="acta">
+    </div>
+    <button type="submit" class="btn">Enviar Documentos para Informe Técnico</button>
+</form>
+</div>
+
+<!-- Contacto directo -->
 <div class="contact-options">
-    <a href="https://wa.me/51991296777" target="_blank" class="contact-btn whatsapp"><i class="fab fa-whatsapp"></i> Ponte en contacto con un abogado experto</a>
-    <a href="tel:+51988521023" class="contact-btn phone"><i class="fas fa-phone"></i> Abogado en línea por teléfono</a>
+<a href="https://wa.me/51991296777" target="_blank" class="contact-btn whatsapp"><i class="fab fa-whatsapp"></i> Ponte en contacto con un abogado experto</a>
+<a href="tel:+51988521023" class="contact-btn phone"><i class="fas fa-phone"></i> Abogado en línea por teléfono</a>
 </div>
 
 <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
@@ -115,11 +131,6 @@ paypal.Buttons({
         });
     }
 }).render('#paypal-button-container');
-
-document.getElementById('docsForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert("Sus documentos han sido enviados correctamente. Nuestros abogados emitirán su Informe Técnico Definitivo en breve (máximo 48 horas si gestionamos acta).");
-});
 </script>
 
 </body>
